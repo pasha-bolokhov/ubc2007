@@ -1,0 +1,2920 @@
+\documentclass[pdf,UofT06talk,slideColor,colorBG,accumulate]{prosper}
+%\usepackage[dvips]{color}
+\usepackage{latexsym,pstricks,pst-node,pst-coil,epsf}
+\usepackage{amsmath,amsfonts,amsbsy,amssymb}
+
+%geoffs
+%blends
+%bruce
+%autumn
+%contemporain
+%lignesbleues
+%gyom
+
+% Definition of new colors
+\newrgbcolor{LemonChiffon}{1. 0.98 0.8}
+\newrgbcolor{LightBlue}{0.68 0.85 0.9}
+\newrgbcolor{PaleGray}{0.8 0.8 0.8}
+\newrgbcolor{PaleRed}{0.9 0.6 0.6}
+\newrgbcolor{PaleGreen}{0.4 0.7 0.4}
+\newrgbcolor{PaleBlue}{0.4 0.4 0.7}
+
+
+%\def\fntb{\fontfamily{ppl}\fontshape{it}\fontsize{8pt}{10pt}\selectfont}
+%\def\fnt{\usefont{T1}{pcr}{b}{n}\fontsize{8pt}{10pt}\selectfont}
+
+%\def\fnt{\fontfamily{ppl}\selectfont}
+
+%\def\aaa{\fontfamily{ppl}\fontsize{12pt}{6pt}\selectfont}
+
+%\def\fnt{\fontfamily{ppl}\fontsize{8pt}{6pt}\selectfont}
+
+\newcommand{\nc}{\newcommand}
+\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+\newcommand{\p}{\partial}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ov}{\overline}
+\newcommand{\md}{\mathcal{D}}
+\newcommand{\eq}{{\rm eq}}
+\newcommand{\lgr}{\left\lgroup}
+\newcommand{\rgr}{\right\rgroup}
+\newcommand{\GeV}{{\rm GeV}}
+\newcommand{\Mpl}{M_{\rm Pl}}
+\newcommand{\Gsph}{\Gamma_{\rm sph}}
+\newcommand{\meff}{m^{\rm eff}_\nu}
+\newcommand{\eV}{{\rm eV}}
+
+
+\nc{\fr}[2]{\frac{#1}{#2}}
+\newrgbcolor{mathcolor}{0.7 0.0 0.7}
+
+\newcommand{\addSlide}[3]
+{
+ \untilSlide*{#1}{\PaleGray{#3}}
+ \fromSlide*{#2}{#3}
+}
+
+\slideCaption{Lorentz Violation and Generation of Baryon Asymmetry
+		of the Universe}
+
+\title{
+\vspace{-1.0cm}
+%\vspace{-4.0cm}
+%\hspace{-2.0cm}
+%\hspace{-20.0cm}
+%\begin{flushleft}
+\begin{center}
+%\includegraphics[height=7cm,keepaspectratio,clip=true]
+%		{SanDiego/san4.eps}
+\end{center}
+%\end{flushleft}
+%\vspace{-6.2cm}
+\Large\lbrown Lorentz Violation \\ 
+			and \\
+	Generation of Baryon Asymmetry \\
+		of the Universe\\
+\normalsize hep-ph/0610070
+}
+\institution{
+%\vspace{-3.0cm}
+%\includegraphics[width=12cm]{SanDiego/SDNight-a.eps}
+%\it Perimeter Institute for Theoretical Physics
+%\includegraphics[width=10cm]{pi.eps}
+%\includegraphics[width=10cm]{IMGP1870.EPS}
+%\includegraphics[width=9cm]{script.eps}
+\vspace{0.7cm}
+\brown
+University of British Columbia	\quad $ \bullet $ \quad   2007
+}
+
+\author{
+\vspace{1.4cm}
+\brown Pavel A. Bolokhov\\
+University of Victoria~~ and ~~St.Petersburg State University
+}
+ 
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	\vspace{1.0cm}
+\usefont{T1}{ppl}{m}{n}\fontsize{30.0pt}{30.0pt}\selectfont
+\begin{center}
+	Part I\\
+	LV Interactions in the Standard Model
+\end{center}
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}[Glitter]{Introduction to LV}
+
+	Study of Lorentz-violating theories provides probes of physics
+	{\mybf far} beyond the Planck scale.
+	
+	The most straightforward idea to test Lorentz invariance is the
+	experiments of Michelson-Morley type. 
+	They have pushed New Physics beyond $ 10^{27}~\GeV $ scale. 
+
+	Later came the idea of introducing {\myit kinematic} Lorentz violation,
+	i.e. modification of propagation of particles:
+{
+\mathcolor
+\[
+	E^2 ~=~ m^2 ~+~ p^2 ~+~ \frac{\eta}{M} \cdot p^3 ~+~ 
+			\frac{\kappa} {M^2} \cdot p^4 ~+~ \dots ~.
+\]
+}
+	
+	Here astrophysical observations have pushed  $ M $ to 
+	$ 10^{33}~\GeV $ level.
+
+	The theories of this sort introduce LV in an {\myit ad hoc} manner.
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	In the {\mybf Effective Field Theory} one introduces LV operators
+
+{
+\mathcolor
+\begin{equation*}
+	\mc{L}_{\rm LV} ~=~ \mc{L}_{\rm SM} 
+				~+~
+			\sum_n 
+			c_n^{\mu\nu ...}
+			\frac {\mc{O}_{\mu\nu ...}^n} {\Lambda^n}~.
+\end{equation*}
+}
+
+	This facilitates the study of observable effects caused by explicit
+	violation of Lorentz symmetry.
+
+	The coefficients $ c_n^{\mu\nu ...} $ are background tensors which
+	break explicitly Lorentz invariance.
+
+	Such a theory may be viewed as a natural effective description of a 
+	{\myit spontaneously} broken Lorentz invariance.
+
+	The latter assumption allows to alleviate most of the conceptual questions
+	about Lorentz violation.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Common Sense Requirements}
+
+	The operators should better be 
+\begin{itemize}
+	\item Gauge invariant
+	\item Lorentz invariant, apart from coupling to the background tensor
+	\item not reducible to lower dimension operators by the equations
+		of motion
+	\item not reducible to a total derivative
+	\item coupled to an irreducible background tensor.
+\end{itemize}
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\overlays{4}
+%{
+\begin{slide}{Lower-dimensional LV interactions}
+
+%\FromSlide{1}
+	In QED, the generic expansion in terms of the gauge invariant 
+	operators starts at dimension {\red three}:
+
+{
+\mathcolor
+\[
+\nonumber
+{\cal L}_{\rm QED}^{(3)} =
+~-~{\dgreen a_\mu}\,  \bar \Psi \gamma_\mu \Psi
+~-~ {\dgreen b_\mu}\,  \bar \Psi \gamma^\mu \gamma_5 \Psi 
+~-~ \frac{1}{2}{\dgreen H_{\mu\nu}}\bar \Psi \sigma^{\mu\nu} \Psi
+~-~ {\dgreen k_\mu}\,  
+\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda~.
+%\label{LVqed}
+\]
+}
+
+%\FromSlide{2}
+	Dimension three operators create a problem:
+	from dimensional counting one expects 
+	{\blue $ a_\mu \sim M n_\mu $}, 
+	where {\blue $ n_\mu $} is a unit vector, and
+	$ M $ is the scale of New Physics.
+	That creates {\myit\blue disastrous} effects.
+
+%\FromSlide{3}
+	Even if the LV coefficients are tuned small, they will be 
+	exploded by quantum corrections coming from quadratic divergencies
+	of the higher-dimensional operators:
+%\FromSlide{4}
+{
+\mathcolor
+\[
+[LV]_{\rm dim~3} ~~\sim~~ ({\rm loop~factor}) \, 
+\;\Lambda_{UV}^2\;
+\times\; [LV]_{{\rm dim}~5}~. 
+\]
+}
+
+\end{slide}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Higher-dimensional LV interactions}
+
+	Higher-dimensional operators start with dimension {\mybf five}.
+
+	Simple operators have been considered before, for instance
+\[
+	\mc{L}^{\rm dim~5}_{\rm QED} ~~=~~ 	
+		C^{\mu\nu\rho}\cdot F_{\mu\lambda} \p_\nu \wt{F}_\rho^{~\lambda}
+		~~+~~
+		C_1^{\mu\nu\rho}\cdot \ov{\psi}\, \gamma_{(\mu} 
+		\mathcal{D}_\nu \mathcal{D}_{\rho)} \psi 
+\]
+
+	These particular operators modify dispersion relations of the photon and electron.
+	
+	Full classification of dimension five interactions has not been done.
+
+	In QED alone one finds 15 operators. Many more in the Standard Model.
+
+	However, the problem of quadratic divergencies plagues some portion of them:
+\[
+		\wt{c}_{Q,1}^\mu \cdot
+	\ov{Q}\, \gamma^\lambda \wt{F}_{\mu\lambda}\, Q 
+	~~\longrightarrow~~
+	\Lambda^2 \, a^\mu \cdot \ov{Q}\, \gamma_\mu\, Q~
+\]
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Major grouping of operators}
+
+	We group all operators in the Standard Model into 3 types:
+
+\vspace{0.5cm}
+\begin{itemize}
+\item	{\myit Unprotected}
+\[
+		\wt{c}_{Q}^\mu \cdot
+	\ov{Q}\, \gamma^\lambda \wt{F}_{\mu\lambda}\, Q 
+\]
+%\vspace{0.5cm}
+
+\item	{\myit UV-enhanced}
+\[
+	E^2 ~=~ m^2 ~+~ p^2 ~+~ \frac{\eta}{M} \cdot p^3 
+\]
+%\vspace{0.5cm}
+
+\item	{\myit Soft LV interactions}
+\[
+	c_{Q}^\mu \cdot
+	\ov{Q}\, \gamma^\lambda F_{\mu\lambda}\, Q
+\]
+
+\end{itemize}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{slide}{``Protecting'' the operators}
+\begin{slide}{Protecting the operators}
+
+        Some symmetry-based properties of dimension five operators forbid
+        their transmutation into lower-dimensional ones.
+	
+\begin{itemize}
+\item	{\myit Tensor Structure}. In the Standard Model there are no
+	CPT-odd dimension three operators of rank higher than one
+\[
+	D_{Q}^{\mu\nu\rho} \cdot
+	\ov{Q}\, \gamma_{(\mu} F_{\rho)\nu}\, Q
+\]
+
+\item	{\myit T-invariance}. In the Standard Model one needs multiple
+	loops to flip $ T $-parity of an operator
+\[
+	c_{Q}^\mu \cdot
+	\ov{Q}\, \gamma^\lambda F_{\mu\lambda}\, Q
+	~~\nrightarrow~~
+	\Lambda^2 \, a^\mu \cdot \ov{Q}\, \gamma_\mu\, Q~
+\]
+
+\end{itemize}
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{slide}{``Protecting'' the operators}
+\begin{slide}{Protecting the operators}
+
+\begin{itemize}
+\item 	{\myit Supersymmetry}. 
+	In the MSSM, dimension three LV operators do not exist at all.
+\begin{align*}
+	\wt{c}_{\rm SUSY,Q}^\mu \cdot 
+	&
+	\left( 
+	Y_Q g'\, \ov{Q} \gamma^\lambda \wt{F}_{\mu\lambda} Q   ~~+~~
+	g\,  \ov{Q} \gamma^\lambda \wt{W}_{\mu\lambda} Q   ~~+~~
+	\right . 
+	\\
+	& 
+	\left .
+	g_3\, \ov{Q} \gamma^\lambda \wt{G}_{\mu\lambda} Q 
+	\right)  ~~+~~
+	\ldots~
+\end{align*}
+	As usual, supersymmetry turns quadratic divergencies into
+	logarithmic.
+
+\item	{\myit Lepton number violation}.
+	There is a unique example of an operator of dimension five
+	which violates the lepton number by $ \Delta L = 2 $
+\[
+	\varsigma^{\mu\nu} \cdot
+	\left( H^\dag L \right)^T \sigma_{\mu\nu} \left( H^\dag L \right)
+\]
+
+\end{itemize}
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Sources of Constraints}
+
+\begin{itemize}
+
+\item {\myit Unprotected Operators}.
+	Constraints on dimension 3 operators transfer into a limit
+	$ \ll 10^{-31}~\GeV^{-1} $ for unprotected operators.
+
+\item {\myit Ultra-high Energy Cosmic Rays}.
+	The fact of observation of high-energy cosmic rays sets typical
+	constraints on {\myit UV-enhanced} LV of the order of
+	$ 10^{-33-34}~\GeV^{-1} $. 
+
+\item {\myit Precision Experiments}.
+	Constraints from Cosmic Rays are not applicable.
+	{\myit Soft LV interactions} inducing coupling of nuclear spin to
+	the preferred direction put constraints of order of
+	$ 10^{-30-31}~\GeV^{-1} $.
+	
+\end{itemize}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Sources of Constraints}
+
+\begin{itemize}
+\item {\myit Electric Dipole Moments}.
+	The operators of the type 
+$ 	D_q^{\mu\nu\rho} \cdot 
+	\ov{q}\, \gamma_{(\mu} F_{\rho)\nu}\gamma^5\, q  $
+	written in terms of effective Hamiltonian possess the signature
+	of Electric Dipole Moment interactions. 
+	The existing limits on EDMs translate into
+	the bound of $ 10^{-12}~\GeV^{-1} $.
+
+\item {\myit Neutrino Phenomenology}.
+	At low energies
+\[
+ 	\varsigma^{\mu\nu} \cdot
+	\left( H^\dag L \right)^T \sigma_{\mu\nu} \left( H^\dag L \right)
+	~~\rightarrow~~
+	v^2 \cdot \varsigma^{\mu\nu}_{(\nu)} \cdot \nu^T \sigma_{\mu\nu} \nu 
+\]
+	It can change the patterns of neutrino oscillations.
+	Constraints from reactor and atmospheric neutrino oscillation
+	data can be used to limit various components of 
+	$ \varsigma^{\mu\nu} $ at $ 10^{-23-24}~\GeV^{-1} $ level.
+
+\end{itemize}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	\vspace{1.5cm}
+\usefont{T1}{ppl}{m}{n}\fontsize{30.0pt}{30.0pt}\selectfont
+\begin{center}
+	Part II\\
+	$ CPT $-odd Leptogenesis
+\end{center}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	The idea of LV-driven generation of Baryonic Asymmetry of
+	the Universe (BAU) resides on the fact that dimension five
+	LV operators are odd under $ CPT $
+
+\[
+	E^2 ~=~ m^2 ~+~ p^2 ~\pm~ \frac{\eta}{M} \cdot p^3 
+\]
+
+	This creates an effective chemical potential of opposite sign
+	for quarks and antiquarks
+\[
+	f_{q,\ov{q}} ~~=~~
+	\left\lgroup  1 ~+~  e^{ (E ~\pm~ \mu_{\rm eff}) }/T 
+	\right\rgroup^{-1}~.
+\]
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	Therefore, non-zero BAU is created already in 
+	{\myit equilibrium}.
+
+	The amount of final asymmetry is bound to the temperature
+	of freeze-out of sphalerons $ T \sim M_W $:
+\[
+	Y_b  ~=~ \frac{\Delta b}{s}  \sim  \frac{M_W} {\Lambda_{CPT}}
+\]
+	In such scenarios, however, $ \Lambda_{CPT} $ has to be less
+	than $ 10^{12}~\GeV $.
+
+	However, experimental data require $ \Lambda_{CPT} $ to be 
+	greater than the {\mybf Planck scale}.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	In  $ CPT $-odd Leptogenesis, we introduce 
+\[
+	\eta_\text{lepton}^{\mu\nu\rho} \cdot
+	\ov{\psi} \gamma_\mu \md_\nu \md_\rho \psi~,
+\]
+	in the lepton sector.
+
+	{\myit Heavy majorana neutrinos} induce
+\[
+	\mathcal{L}_{\rm eff} ~~=~~ \frac{Y_{ij}^\nu}{2\, M_R} \, H^\dag L_i^\alpha H^\dag L_{j\alpha}~
++{\rm h.c.},
+\]
+	An initial $ B - L $ is generated
+	through majorana neutrinos at high energies and is preserved
+	by sphalerons from $ 10^{12} $ to $ 10^{2}~\GeV $
+
+	Heavy neutrinos keep the lepton number in equilibrium
+	(which is non-zero) {\myit until} 
+	the neutrino-mediated processes ({\myit L-processes})
+	become slower than the Hubble rate.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+	Therefore, the final asymmetry is determined by the freeze-out
+	temperature of L-violating processes
+\[
+	\Gamma_L ~~\propto~~ \frac{T^3}{M_R^2} 
+	~~\sim~~ \Gamma_H ~~\propto~~ \frac{T^2}{\Mpl},
+\]
+	which results in
+\[
+	T_R ~~\propto~~ \frac{M_R^2}{\Mpl}~
+	~~\Rrightarrow~~
+	T_R/M_W ~\sim~ 10^9 \qquad \text{for}\quad M_R \sim 10^{15}~\GeV
+\]
+
+	Another feature of $ CPT $-odd leptogenesis is that one only
+	needs {\mybf one generation} of heavy neutrinos.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	The prediction on the BAU we have made was based on dimensional
+	counting.
+
+\vspace{0.2cm}
+	A more sophisticated prediction should involve the dynamics of
+	the number density of leptons and baryons.
+
+\vspace{0.2cm}
+	In particular, one has to account for the sphaleron processes
+	which change the baryon and lepton densities, leaving intact
+	their difference $ n_b - n_l $:
+
+\[
+		\p_t\, (n_b + n_l)
+	~~~=~~~ -\, \Gsph 
+		\lgr   n_b - n_b^\eq \;~+~\;
+		       n_l - n_l^\eq 
+		\rgr~
+\]
+
+	This is a reasonable approximation for dynamics of  $ B + L $.
+
+\[
+	\Gsph ~~\simeq~~ \omega\, T~, \qquad\qquad 
+	{\rm ~with~}
+	\omega ~\simeq~ \,10^{-5}~.
+\]
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{L-processes}
+
+	The kinetic equations are based on the rate of heavy
+	neutrino-mediated processes.
+\[
+	\mathcal{L}_m  ~~=~~ 
+	-\,\frac 12\, M_R\, \left( NN ~+~ \ov{N}\ov{N} \right) ~~+~~
+				h_a\cdot \ov{L}_a\ov{ N}H ~~+~~  
+				h_a^\dagger\cdot H^\dagger N L_a~
+\]	
+
+	Neutrinos can be integrated out to produce an effective
+	vertex
+\[
+	\mathcal{L}_{\rm eff} ~~=~~ \frac{Y_{ij}^\nu}{2\, M_R} \, H^\dag L_i^\alpha H^\dag L_{j\alpha}~
++{\rm h.c.}
+\]
+
+%\begin{figure}
+\begin{center}
+\includegraphics[width=5cm]{lflip.eps}
+%\caption{$\Delta L=2$ processes generated by the effective vertex \eqref{L_eff}.}
+%\label{lflip_fig}
+\end{center}
+%\end{figure}
+
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Boltzmann equations}
+
+	Combining the Hubble expansion rate, and the rate of 
+	L-processes and sphaleron processes, one obtains
+\[
+\begin{split}
+% first line
+	g_l \frac{d}{dT}Y_l 
+	& ~~\;=~~\;
+	\frac{0.6}{g_*^{1/2}}\, 
+	\frac{\omega\,\Mpl}{T^2}\,
+	\lgr g_l (\,Y_l + 12\,\eta_l\,T\,) ~~+~~ 
+	     g_b (\,Y_b + 12\,\eta_b\,T\,)  \rgr 
+	\;~~%+
+	\\
+% second line
+	& \;~~+~~\;  
+	\frac{0.6\,\pi^2}{g_*^{1/2}}\, 
+	\frac{\gamma\,\Mpl}{M_R^2}\,
+	\cdot (\, Y_l + 12\,\eta_l\,T\,)\\
+% third line
+	g_b \frac{d}{dT}Y_b 
+	& ~~\;=~~\;
+	\frac{0.6}{g_*^{1/2}}\, 
+	\frac{\omega\,\Mpl}{T^2}\,
+	\lgr g_l (\,Y_l + 12\,\eta_l\,T\,) ~~+~~ 
+	     g_b (\,Y_b + 12\,\eta_b\,T\,)  \rgr .
+\end{split}
+\]
+	Here  $ \omega $ parametrizes the sphaleron rate, and
+	$ \gamma $ the rate of L-processes.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Soluable limit}
+
+	This system can be solved in the limit of small
+	sphaleron rate, $ \omega \to 0 $:
+
+\[
+	\frac{d}{dT}Y_l ~~=~~ 
+	g_l\,
+	\frac{0.6\,\pi^2}{g_*^{1/2}}\, 
+	\frac{\gamma\,\Mpl}{M_R^2}\,
+	\cdot \lgr\, Y_l ~+~ 12\,\eta_l\,T\, \rgr
+\]
+	yielding an estimate for the freeze-out temperature
+\[
+	T_R ~~\sim~~ 
+	\frac { M_R^2} { \lambda\, \Mpl }
+	~~=~~ 10^{12-14}~\GeV
+\]
+	
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Evolution}
+
+	We obtain the amount of LV (in terms of $ \eta_l $, $ \eta_b $)
+	required to produce the observed BAU, and confront them
+	with the known experimental limits on LV.
+
+	\vspace{0.2cm}
+	Since the kinetic equations are linear in the number densities,
+	it can be done separately for $ \eta_l $ and $ \eta_b $.
+
+	\vspace{0.2cm}
+	The kinetic equations depend on an ``effective'' mass of the
+	light neutrinos  (through the rate of L-processes)
+\[	
+	\Gamma_L ~~\sim~~ (\meff)^2\;,
+	\quad
+	\meff \equiv \left( \sum m_{\nu_i}^2 \right)^{1/2} 
+	~~=~~
+	0.05~\eV~~\dots~~0.65~\eV
+\]
+
+	The lower bound for this parameter comes from the largest
+	observed neutrino oscillations;
+	the upper bound comes from the cosmological limit on the sum
+	of neutrino masses $ \sum m_{\nu_i} $
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Lepton number evolution, $ \eta_l \neq 0 $}
+
+\begin{center}
+\includegraphics[width=6cm,angle=270]{l_dom_asymm_bau.ps}
+\end{center}
+	With the increase of the effective neutrino mass, 
+	the rate of L-processes increases, and the lepton number
+	density follows closer to the equilibrium curve.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Baryon number evolution, $ \eta_b \neq 0 $}
+
+\begin{center}
+\includegraphics[width=6cm,angle=270]{b_dom_asymm_bau.ps}
+\end{center}
+
+	The baryon density curve starts from zero and
+	jumps over the equilibrium curve.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Required amount of LV}
+
+\begin{center}
+\includegraphics[width=6cm,angle=270]{scan_log.ps}
+\end{center}
+
+$ \eta_l $ changes over the ``physical'' interval.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Experimental constraints}
+
+	Required amount of Lorentz violation is
+\[
+	\eta_l ~~\simeq~~ 10^{-22-24}~\GeV^{-1} \qquad
+	\text{or} \qquad \eta_b ~~\simeq~~  - 10^{-23}~\GeV^{-1}
+\]
+
+%\vspace{0.2cm}
+	Low-energy precision experiments set the bounds
+\[
+|\eta_d-\eta_Q - 0.5(\eta_u-\eta_Q)| ~<~ 10^{-27}~{\rm GeV}^{-1}
+\]
+
+	The strongest constraints on the lepton sector come from
+	the observation of high-energy cosmic rays, 
+	$ E_{max} \sim 10^{12}~\GeV $.
+
+	Non-zero $ \eta_l $ makes possible the decay of the proton
+	$ p \to p l \ov{l} $ and prevents acceleration of the rays.
+
+	Observation of these cosmic rays places a bound
+\[
+	|\eta_L|, ~|\eta_E| ~<~ 10^{-33}~{\rm GeV}^{-1}
+%	\qquad \text{vs required} \quad 10^{-22-23}~{\rm GeV}^{-1}
+\]
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{}
+
+	There is a loophole which the cosmic rays do not cover.
+\vspace{0.2cm}
+
+	In the case that all LV is concentrated in the up-quark
+	sector, protons will be favored to decay into 
+	$ p \to \Delta^{++} \pi^- $.
+\vspace{0.2cm}
+
+	This needs the negative sign of $ \eta_U $.
+\vspace{0.2cm}
+
+	Then the cosmic rays could exist in the form $ \Delta^{++} $
+	and not constrain $ \eta_U $.
+\vspace{0.2cm}
+
+	However $ 10^{-22-23}~\GeV^{-1} $ is not compatible 
+	with the low energy experiments.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Higher-dimensional operators}
+
+	Asymmetry generated by dimension seven and so on operators
+	can be estimated by the freeze-out temperature
+\[
+	\eta^{(7)} T_R^3 ~,\qquad \eta^{(9)} T_R^5~,\qquad \dots
+\]
+	Astrophysical constraints are still strong, as their strength
+	scales as $ E_{max}/ \Lambda_{CPT} $.
+
+	However, the same loophole with stable $ \Delta^{++} $ exists,
+	and the right-handed up-quark $ CPT $-violation
+\[
+\eta^{(7)}_U = - [(10^{17}-10^{18})~ {\rm GeV}]^{-3}
+\]
+	results in the right magnitude of BAU while avoiding experimental
+	constraints.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}{Conclusions}
+
+\begin{itemize}
+\item	$ CPT $-odd Baryogenesis is an equilibrium alternative to the 
+	conventional baryogenesis 
+
+\item   $ CPT $-odd Leptogenesis is advantageous in the {\mybf gain}
+	of the final BAU --- determined by high freeze-out temperature
+
+\item	Study of dynamics of the number densities in this scenario
+	yields the amount of Lorentz violation capable of 
+	producing the observed BAU, $ \eta \sim 10^{-22-23}~\GeV^{-1} $
+
+\item   Strong experimental constraints on LV most certainly exclude 
+	this type of scenarios
+
+\item	We have only considered the {\myit UV-enhanced} operators;
+	other interactions {\myit e.g.} $ \ov{Q}\, \gamma_\mu Q H^\dag H $
+	could produce an effective chemical potential, although
+	they have problems of their own.
+\end{itemize}
+
+\end{slide}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\overlays{2}{
+%%\begin{slide}{
+%%%Lorentz-violating Operators Inducing EDMs
+%%}
+%%\vspace{-1.5cm}
+%%\begin{itemize}
+%%\item
+%%	We investigate Lorentz-violating (LV) physics at the level of
+%%	dimension {\myit five} operators
+%%\item
+%%	In the Standard Model at 1 GeV there is one vector LV operator inducing EDM
+%%\[
+%%\mathcolor
+%%{\cal L}_{\rm CPT}^{\rm vector} = 
+%%	\sum_{i=u,d,s} d^\mu_i \cdot \bar {q}_i \gamma^\lambda \gamma^5 
+%%F_{\lambda\mu} q_i
+%%\]
+%%\untilSlide*{1}
+%%{
+%%	analogous operators for leptons vanish on the equations of motion.
+%%\item
+%%	and a number of tensor operators with EDM-like signatures
+%%{
+%%\mathcolor
+%%\begin{multline}
+%%\notag
+%%{\cal L}_{\rm CPT}^{\rm tensor}=
+%%\sum_{i=u,d,s,e,\mu}
+%%%D^{\mu\nu\rho}_q \cdot \overline{\psi}_i\gamma_{(\mu} F_{\rho)\nu} \gamma^5 \psi_i
+%%D^{\mu\nu\rho}_q \cdot \overline{\psi}_i\gamma_{\mu} F_{\nu\rho} \gamma^5 \psi_i
+%%	~~+
+%%% tenth line
+%%	\\
+%%\notag
+%%	+\sum_{i=u,d,s}
+%%	\widetilde{D}^{\mu\nu\rho} \cdot \overline{\psi}_i
+%%	\gamma_{\mu}  G^a_{\nu\rho} t^a \gamma^5\psi_i
+%%\end{multline}
+%%}
+%%}
+%%\fromSlide*{2}
+%%{
+%%\vspace{-0.5cm}
+%%\item   
+%%	The important property: they {\myit preserve chirality}.
+%%	Thus, unlike ordinary EDMs, {\myit decouple linearly} with the scale
+%%	of New Physics:
+%%\[
+%%\mathcolor
+%%	d^{\mu}_{\rm CPT} \propto \Lambda_{\rm CPT}^{-1}~{\dblue ,} 
+%%	\quad{\rm\dblue whereas}\quad d_{\rm CP} \propto m_q \Lambda_{\rm CP}^{-2}
+%%\]	     
+%%}
+%%\end{itemize}
+%%
+%%\end{slide}
+%%}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{slide}[Glitter]{
+%%%Lorentz-violating Operators Inducing EDMs
+%%}
+%%\vspace{-1.5cm}
+%%	
+%%\begin{itemize}
+%%\item
+%%	Vector LV operators in the quark sector induce EDM of the 
+%%	{\red neutron}
+%%\[
+%%\mathcolor
+%%	d_n = 0.8 d^0_d - 0.4 d^0_u - 0.1 d^0_s
+%%\]
+%%	where the current experimental constraint 
+%%{\mathcolor $|d_n| < 6\times 10^{-26} e{\rm cm} $}
+%%	can be applied.
+%%
+%%\item
+%%	EDMs of {\red diamagnetic atoms} have a suppression due to preserved chirality
+%%	---
+%%	the Schiff moment is induced by the EDMs of nucleons and 
+%%	{\myit not} by the $ \pi $-exchange.
+%%\item
+%%	By the same reason, EDM of a {\red deutron} is suppressed as
+%%	{\mathcolor $ \alpha m_q / \Lambda_{\rm QCD} $}.
+%%\item
+%%	This way, a {\myit\blue discretion between $ CPT $-odd and $ CP $-odd EDMs can
+%%	be done}.
+%%%\item   
+%%%	Tensor LV operators induce more complicated interactions of the 
+%%%	nuclear/atomic spin
+%%%\[
+%%%	H = - \mu {\bf B} \cdot \fr{\bf{S}}{S} - {\cal D}^{ij} E_i \cdot \fr{S_j}{S}
+%%%\]
+%%%	resulting in an EDM signature $ {\cal D}_{ij} E^i B^j $ with
+%%%	12 or 24 hour modulation.
+%%\end{itemize}
+%%
+%%\end{slide}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{slide}[Dissolve]{
+%%%Lorentz-violating Operators Inducing EDMs
+%%}
+%%\vspace{-1.5cm}
+%%	
+%%\begin{itemize}
+%%\item
+%%	Tensor operators at the Quantum Mechanical level are represented as
+%%{\mathcolor
+%%\[
+%%	H = - \mu {\bf B} \cdot \fr{\bf{S}}{S} - {\cal D}^{ij} E_i \cdot \fr{S_j}{S}
+%%\]
+%%}
+%%	which further produces 
+%%	{\mathcolor $ E_i B_k {\cal D}^{ik} $} --- an EDM-like signature.
+%%	One expects a 12/24 hour modulation due to rotation of the Earth.
+%%\item
+%%	In {\red paramagnetic atoms}, atomic EDM occurs due to mixing between
+%%	electron levels of opposite parity. 
+%%	The resulting EDM is enhanced w.r.t. electron EDM:
+%%{\mathcolor
+%%$
+%%	d({\rm Cs})/d({\rm e}) = 7
+%%$
+%%}, thus $\mathcolor | {\cal D}_{ik} | ~<~ 10^{-25} e{\rm cm} $~. 
+%%
+%%
+%%\end{itemize}
+%%
+%%\end{slide}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{slide}[Box]{
+%%%Lorentz-violating Operators Inducing EDMs
+%%}
+%%%\vspace{-1.5cm}
+%%	
+%%\begin{itemize}
+%%\item
+%%	The most stringent constraints exist on dimension {\myit three}
+%%	LV operators, {\myit e.g.}
+%%\[\mathcolor
+%%	b^\mu \cdot \ov{\psi} \gamma_\mu \gamma_5 \psi
+%%\]
+%%\item
+%%	Dimension five interactions are hard to propagate into dimension
+%%	three ones as this involves $ CP $-violation. Nevertheless,
+%%{\mathcolor
+%%\[
+%%	\Lambda_{\rm CPT} ~\sim~ 10^{11-13}~{\rm GeV}
+%%\]
+%%}
+%%	
+%%\end{itemize}
+%%
+%%\end{slide}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{slide}[Wipe]{Conclusions}
+%%
+%%\blue
+%%%\myitem{1}{\includegraphics[width=.4cm]{green-bullet-on-white.ps}}
+%%\begin{itemize}
+%%\item[{\includegraphics[width=.4cm]{green-bullet-on-white.ps}}]
+%%	$ CPT $-odd EDMs provide a way of probing New Physics governing
+%%	at high energies
+%%\vspace{0.3cm}
+%%\item[{\includegraphics[width=.4cm]{green-bullet-on-white.ps}}]
+%%	Clock-comparison and EDM-searching experiments allow for putting
+%%	constraints on parameters of the CPT-breaking theory
+%%\vspace{0.3cm}
+%%\item[{\includegraphics[width=.4cm]{green-bullet-on-white.ps}}]
+%%	Suppression of $ CPT $-odd EDMs in certain cases provides a way
+%%	of distinguishing $ CP $-odd EDMs from the latter ones.
+%%\end{itemize}	
+%%
+%%\end{slide}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\begin{slide}{
+%%%%%Lorentz-violating Operators Inducing EDMs
+%%%%}
+%%%%\vspace{-1.5cm}
+%%%%	
+%%%%\begin{itemize}
+%%%%\item
+%%%%	Vector LV operators in the quark sector induce EDMs of the neutron
+%%%%\[
+%%%%	d_n = 0.8 d^0_d - 0.4 d^0_u - 0.1 d^0_s
+%%%%\]
+%%%%	where the current experimental constraint 
+%%%%$|d_n| < 6\times 10^{-26} e{\rm cm} $
+%%%%	can be applied.
+%%%%\item   
+%%%%	Tensor LV operators induce more complicated interactions of the 
+%%%%	nuclear/atomic spin
+%%%%\[
+%%%%	H = - \mu {\bf B} \cdot \fr{\bf{S}}{S} - {\cal D}^{ij} E_i \cdot \fr{S_j}{S}
+%%%%\]
+%%%%	resulting in an EDM signature $ {\cal D}_{ij} E^i B^j $ with
+%%%%	12 or 24 hour modulation.
+%%%%\end{itemize}
+%%%%
+%%%%\end{slide}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\begin{slide}{
+%%%%%Lorentz-violating Operators Inducing EDMs
+%%%%}
+%%%%\vspace{-1.5cm}
+%%%%	
+%%%%\begin{itemize}
+%%%%\item
+%%%%	In paramagnetic atoms, electron EDM can be significantly enhanced,
+%%%%	e.g. for Cesium
+%%%%\[
+%%%%	\frac{d_{CPT}({\rm Cs})} {d_{CPT}(e)} ~=~ 7~.
+%%%%\]
+%%%%	which translates into the limit
+%%%%\[
+%%%%	| {\cal D}_{ik} | ~<~ 10^{-25} e{\rm cm}~.
+%%%%\]
+%%%%
+%%%%\item	
+%%%%	Neutron bottles
+%%%%\end{itemize}
+%%%%\end{slide}
+%%%%
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{6}{
+%%%%\begin{slide}{Lorentz Violation}
+%%%%        There are many known examples in the history of physics when 
+%%%%	a symmetry of nature, which was assumed to be exact, has fallen under
+%%%%	experimental scrutiny.
+%%%%
+%%%%	Lorentz symmetry is used as a crucial ingredient in the construction
+%%%%	of fundamental theories of nature.
+%%%%
+%%%%	There is a number of seemingly unrelated motives to study Lorentz
+%%%%	violating theories:
+%%%%\begin{itemize}
+%%%%\addSlide{1}{2}{
+%%%%\item Time evolution of dark energy (quintessence) 
+%%%%      creates a preferred frame which could be detected as a LV 
+%%%% 	background, provided that it couples to the Standard Model.
+%%%%}
+%%%%\addSlide{2}{3}{
+%%%%\item Low-energy limits of string theory contain
+%%%%      a number of gauge fields with
+%%%%        condensed fieldstrengths (fluxes) which
+%%%%%(nearly) massless field, some of which
+%%%%      carry open Lorentz indices.
+%%%%}
+%%%%\addSlide{3}{4}{
+%%%%\item There are some conjectures that a theory of Quantum Gravity
+%%%% 	can manifest itself at low energies through LV modifications
+%%%%	of particle dispersion relations.
+%%%%}
+%%%%\end{itemize}
+%%%%
+%%%%\untilSlide*{4}
+%%%%{\PaleGray
+%%%%	Direct experimental constraints on modifications of dispersion
+%%%%	relations come from {\myit astrophysical processes}
+%%%%	and terrestrial 
+%%%%	{\myit clock comparison} and 
+%%%%	{\myit torsion balance} experiments.
+%%%%}
+%%%%\onlySlide*{5}
+%%%%{
+%%%%	Direct experimental constraints on modifications of dispersion
+%%%%	relations come from {\myit astrophysical processes}
+%%%%	{\PaleGray and terrestrial 
+%%%%	{\myit clock comparison} and 
+%%%%	{\myit torsion balance} experiments.}
+%%%%}
+%%%%\fromSlide*{6}
+%%%%{
+%%%%	Direct experimental constraints on modifications of dispersion
+%%%%	relations come from {\myit astrophysical processes}
+%%%%	and terrestrial 
+%%%%	{\myit clock comparison} and 
+%%%%	{\myit torsion balance} experiments.
+%%%%}
+%%%%%\addSlide{5}{6}{and terrestrial 
+%%%%%	{\myit clock comparison} and 
+%%%%%	{\myit torsion balance} experiments.
+%%%%%	}
+%%%%
+%%%%%\FromSlide{5}
+%%%%%\begin{itemstep}
+%%%%%	\item \fromSlide{4} {astrophysical processes}
+%%%%%	\item \fromSlide{5} {terrestrial clock comparison}
+%%%%%		\fromSlide{6} {and torsion balance experiments}
+%%%%%\end{itemstep}
+%%%%%	astrophysical processes and terrestrial
+%%%%%	clock comparison and torsion balance 
+%%%%%	experiments.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}{\small Lorentz Violating EFT}
+%%%%%\small
+%%%%%\fnt
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Box}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%	One of the most straightforward ways to study the effects of
+%%%%	new physics is to parametrize all our ignorance into a small 
+%%%%	number of new parameters.\\
+%%%%	Lorentz Violation is created at a high UV scale $ M \sim M_{\rm Pl} $,
+%%%%	and at lower scales we have an {\myit effective theory}.
+%%%%
+%%%%\untilSlide*{1}
+%%%%{\PaleGray
+%%%%	In QED, the generic expansion in terms of the gauge invariant 
+%%%%	operators starts at dimension {\PaleRed three}:
+%%%%
+%%%%\[
+%%%%\nonumber
+%%%%{\cal L}_{\rm QED}^{(3)} =
+%%%%~-~{\PaleGreen a_\mu}\,  \bar \Psi \gamma_\mu \Psi
+%%%%~-~ {\PaleGreen b_\mu}\,  \bar \Psi \gamma^\mu \gamma_5 \Psi 
+%%%%~-~ \frac{1}{2}{\PaleGreen H_{\mu\nu}}\bar \Psi \sigma^{\mu\nu} \Psi
+%%%%~-~ {\PaleGreen k_\mu}\,  
+%%%%\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda~.
+%%%%%\label{LVqed}
+%%%%\]
+%%%%}
+%%%%
+%%%%\fromSlide*{2}
+%%%%{
+%%%%	In QED, the generic expansion in terms of the gauge invariant 
+%%%%	operators starts at dimension {\red three}:
+%%%%
+%%%%\[
+%%%%\nonumber
+%%%%{\cal L}_{\rm QED}^{(3)} =
+%%%%~-~{\dgreen a_\mu}\,  \bar \Psi \gamma_\mu \Psi
+%%%%~-~ {\dgreen b_\mu}\,  \bar \Psi \gamma^\mu \gamma_5 \Psi 
+%%%%~-~ \frac{1}{2}{\dgreen H_{\mu\nu}}\bar \Psi \sigma^{\mu\nu} \Psi
+%%%%~-~ {\dgreen k_\mu}\,  
+%%%%\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda~.
+%%%%%\label{LVqed}
+%%%%\]
+%%%%}
+%%%%
+%%%%\untilSlide*{2}
+%%%%{\PaleGray
+%%%%	Naive power counting:
+%%%%\begin{itemize}
+%%%%\item[]	$ \mathcal{L}^{(3)} \sim  M $ \quad  --- {\myit enhanced} by a UV scale
+%%%%\item[]   $ \mathcal{L}^{(4)} \sim  1 $
+%%%%\item[]   $ \mathcal{L}^{(5)} \sim \;1/M $  \quad --- {\myit suppressed} by a UV scale
+%%%%\item[]   \quad...
+%%%%\end{itemize}
+%%%%}
+%%%%
+%%%%\fromSlide*{3}
+%%%%{
+%%%%	Naive power counting:
+%%%%\begin{itemize}
+%%%%\item[]	$ \mathcal{L}^{(3)} \sim  M $ \quad  --- {\myit enhanced} by a UV scale
+%%%%\item[]   $ \mathcal{L}^{(4)} \sim  1 $
+%%%%\item[]   $ \mathcal{L}^{(5)} \sim \;1/M $  \quad --- {\myit suppressed} by a UV scale
+%%%%\item[]   \quad...
+%%%%\end{itemize}
+%%%%}
+%%%%
+%%%%
+%%%%\untilSlide*{3}
+%%%%{\PaleGray
+%%%%	Dimension three operators create a problem:
+%%%%	from dimensional counting one expects 
+%%%%	{\PaleBlue $ a_\mu \sim M n_\mu $}, 
+%%%%	where {\PaleBlue $ n_\mu $} is a unit vector, and
+%%%%	$ M $ is the scale of New Physics.
+%%%%	That creates {\myit\PaleBlue disastrous} effects.
+%%%%}
+%%%%\fromSlide*{4}
+%%%%{
+%%%%	Dimension three operators create a problem:
+%%%%	from dimensional counting one expects 
+%%%%	{\blue $ a_\mu \sim M n_\mu $}, 
+%%%%	where {\blue $ n_\mu $} is a unit vector, and
+%%%%	$ M $ is the scale of New Physics.
+%%%%	That creates {\myit\blue disastrous} effects.
+%%%%}
+%%%%
+%%%%
+%%%%\untilSlide*{4}
+%%%%{\PaleGray
+%%%%	Dimension {\myit five} operators are naturally suppressed.
+%%%%	One of the solutions is if such dimension three and four
+%%%%	operators are suppressed by a {\PaleRed symmetry}.
+%%%%}
+%%%%\fromSlide*{5}
+%%%%{
+%%%%	Dimension {\myit five} operators are naturally suppressed.
+%%%%	One of the solutions is if such dimension three and four
+%%%%	operators are suppressed by a {\red symmetry}.
+%%%%}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}{\small Supersymmetry \fromSlide{5}{rules!}}
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Dissolve}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%	{\myit Supersymmetry} (SUSY) has been introduced a few 
+%%%%	decades ago and is known to have salutary properties for QFT.\\
+%%%%	In particular, it removes quadratic divergencies.
+%%%%
+%%%%	It appears to be beneficial for LV theories too!
+%%%%
+%%%%\addSlide{1}{2}
+%%%%{
+%%%%	In particular in the Minimal Supersymmetric Standard Model,
+%%%%	LV operators of dimensions three and four are prohibited
+%%%%	by the requirements of supersymmetry and gauge invariance.
+%%%%
+%%%%	Lorentz-violating interactions start only at dimension five.
+%%%%}
+%%%%
+%%%%\untilSlide*{2}
+%%%%{\PaleGray
+%%%%	Once Supersymmetry is softly broken, dimension three LV
+%%%%	operators can be induced, with coefficients controlled
+%%%%	by the soft-breaking mass scale, 
+%%%%	{\PaleRed $ m_s \sim 1~{\rm TeV} $}.	
+%%%%}
+%%%%\fromSlide*{3}
+%%%%{
+%%%%	Once Supersymmetry is softly broken, dimension three LV
+%%%%	operators can be induced, with coefficients controlled
+%%%%	by the soft-breaking mass scale, 
+%%%%	{\red $ m_s \sim 1~{\rm TeV} $}.	
+%%%%}
+%%%%
+%%%%\untilSlide*{3}
+%%%%{\PaleGray
+%%%%	Dimension three operators are now pure quantum effects, and
+%%%%	effectively, the divergencies are stabilized at the 
+%%%%	supersymmetric threshold:
+%%%%\[
+%%%%[LV]_{\rm dim~3} ~~\sim~~ ({\rm loop~factor}) \, 
+%%%%\;{\PaleRed m_{s}^2}\;
+%%%%\times\; [LV]_{{\rm dim}~5}~.
+%%%%\]
+%%%%}
+%%%%
+%%%%\fromSlide*{4}
+%%%%{
+%%%%	Dimension three operators are now pure quantum effects, and
+%%%%	effectively, the divergencies are stabilized at the 
+%%%%	supersymmetric threshold:
+%%%%\[
+%%%%[LV]_{\rm dim~3} ~~\sim~~ ({\rm loop~factor}) \, 
+%%%%\;{\red m_{s}^2}\;
+%%%%\times\; [LV]_{{\rm dim}~5}~.
+%%%%\]
+%%%%}
+%%%%
+%%%%\addSlide{4}{5}
+%%%%{
+%%%%	$ \Rrightarrow $ This might lead to a solution of the
+%%%%	naturalness problem: why the lower dimensional LV operators
+%%%%	are so much suppressed as compared to their natural scale.
+%%%%}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{\small Lorentz-violating in SQED at dimension five}
+%%%%
+%%%%	SQED --- supersymmetric extension of QED --- is the 
+%%%%	simplest gauge supersymmetric theory.
+%%%%
+%%%%\addSlide{1}{2}
+%%%%{	
+%%%%	At dimension five level there are only {\myit three} LV interactions
+%%%%	(whereas in ordinary QED there are about {\myit ten} of them).
+%%%%}
+%%%%
+%%%%\untilSlide*{2}
+%%%%{\PaleGray
+%%%%	Upon SUSY breaking LV SQED {\myit does} generate dimension 
+%%%%	{\myit three} interactions:
+%%%%\\[0.5cm]
+%%%%
+%%%%\begin{center}
+%%%%%	\includegraphics[width=2.4cm,height=2.7cm,keepaspectratio]
+%%%%%	{diag_chiral_SB_chiral_LV_A_pale.ps} 
+%%%%\end{center}
+%%%%}
+%%%%\fromSlide*{3}
+%%%%{
+%%%%	Upon SUSY breaking LV SQED {\myit does} generate dimension 
+%%%%	{\myit three} interactions:
+%%%%\\[0.5cm]
+%%%%
+%%%%\begin{center}
+%%%%%	\includegraphics[width=2.4cm,height=2.7cm,keepaspectratio]
+%%%%%	{diag_chiral_SB_chiral_LV_A_blue.ps} 
+%%%%\end{center}
+%%%%}
+%%%%
+%%%%\vspace{0.3cm}
+%%%%\addSlide{3}{4}
+%%%%{
+%%%%	Very strigent constraints on the {\myit Standard Model}
+%%%%	Lorentz violation come from astrophysical observations, as
+%%%%	LV modifies dispersion relations --- this might cause birefridgence
+%%%%	of light and vacuum \v{C}erenkov radiation.
+%%%%}
+%%%%
+%%%%\addSlide{4}{5}
+%%%%{
+%%%%	Supersymmetric LV almost {\myit do not modify} the dispersion
+%%%%	relations and so evade these stringent constraints.
+%%%%}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{6}
+%%%%{
+%%%%\begin{slide}{\small Conclusions}
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Blinds}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%\begin{itemize}
+%%%%\item		Analysis of low energy effective behavior shows that 
+%%%%		LV in SQED leads to detectable effects, being limited
+%%%%		at the level of $ 10^{-10} - 10^{-12} $.
+%%%%\vspace{0.2cm}
+%%%%\addSlide{1}{2}
+%%%%{
+%%%%\item
+%%%%		Thus, theories predicting LV at dimension five level
+%%%%		have a potential naturalness problem.
+%%%%}
+%%%%\vspace{0.2cm}
+%%%%\addSlide{2}{3}
+%%%%{
+%%%%\item
+%%%%		This might be healed also by symmetry arguments,
+%%%%		{\myit e.g. CPT}, which
+%%%%		could {\myit prohibit} dimension five interactions.
+%%%%}
+%%%%\vspace{0.2cm}
+%%%%\addSlide{3}{4}
+%%%%{
+%%%%\item
+%%%%		Dimension {\myit six} LV interactions are CPT-invariant
+%%%%		and {\myit not yet} excluded by experiment.
+%%%%}
+%%%%\vspace{0.2cm}
+%%%%\addSlide{4}{5}
+%%%%{
+%%%%\item
+%%%%		The next stage to consider is a
+%%%%		{\myit Dimension six LV extension of the Minimal Supersymmetric
+%%%%		Standard Model} (MSSM).
+%%%%}
+%%%%\end{itemize}
+%%%%
+%%%%\vspace{0.4cm}
+%%%%\addSlide{5}{6}
+%%%%{
+%%%%		P.A.Bolokhov, S.G.Nibbelink and M.Pospelov, 	
+%%%%		Phys. Rev. D72:015013 (2005), hep-ph/0505029
+%%%%\\[0.1cm]
+%%%%
+%%%%		Credits: University of Guelph
+%%%%		\quad$\bullet$\quad 
+%%%%		Perimeter Institute
+%%%%		\quad$\bullet$\quad 
+%%%%		University of Victoria
+%%%%
+%%%%\vspace{0.3cm}
+%%%%\begin{center}
+%%%%\myit
+%%%%	August 2005 ~$\bullet$~ CAM 2005 ~$\bullet$~ San Diego, CA
+%%%%\end{center}
+%%%%}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}{Introduction: Why Lorentz Violation?}
+%%%%%\vspace{-0.5cm}
+%%%%%\small
+%%%%%\fnt
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Glitter}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%        There are many known examples in the history of physics when 
+%%%%	a symmetry of nature, which was assumed to be exact, has fallen under
+%%%%	experimental scrutiny.
+%%%%
+%%%%	Lorentz symmetry is used as a crucial ingredient in the construction
+%%%%	of fundamental theories of nature.
+%%%%
+%%%%	There is a number of seemingly unrelated motives to study Lorentz
+%%%%	violating theories:
+%%%%\begin{itemstep}
+%%%%\item Time evolution of dark energy (quintessence) 
+%%%%      creates a preferred frame which could be detected as a LV 
+%%%% 	background, provided that it couples to the Standard Model.
+%%%%\item Low-energy limits of string theory contain
+%%%%      a number of gauge fields with
+%%%%        condensed fieldstrengths (fluxes) which
+%%%%%(nearly) massless field, some of which
+%%%%      carry open Lorentz indices.
+%%%%\item There are some conjectures that a theory of Quantum Gravity
+%%%% 	can manifest itself at low energies through LV modifications
+%%%%	of particle dispersion relations.
+%%%%\end{itemstep}
+%%%%
+%%%%\fromSlide{4} 
+%%%%{
+%%%%	Direct experimental constraints on modifications of dispersion
+%%%%	relations come from {\myit astrophysical processes} 
+%%%%	\fromSlide{5}{and terrestrial 
+%%%%	{\myit clock comparison} and 
+%%%%	{\myit torsion balance} experiments.
+%%%%	}
+%%%%}
+%%%%
+%%%%%\FromSlide{5}
+%%%%%\begin{itemstep}
+%%%%%	\item \fromSlide{4} {astrophysical processes}
+%%%%%	\item \fromSlide{5} {terrestrial clock comparison}
+%%%%%		\fromSlide{6} {and torsion balance experiments}
+%%%%%\end{itemstep}
+%%%%%	astrophysical processes and terrestrial
+%%%%%	clock comparison and torsion balance 
+%%%%%	experiments.
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{6}
+%%%%{
+%%%%\begin{slide}{\small Lorentz Violating EFT}
+%%%%%\small
+%%%%%\fnt
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Box}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%	One of the most straightforward ways to study the effects of
+%%%%	new physics is to parametrize all our ignorance into a small 
+%%%%	number of new parameters.
+%%%%
+%%%%\FromSlide{2}
+%%%%	In QED, the generic expansion in terms of the gauge invariant 
+%%%%	operators starts at dimension {\red three}:
+%%%%
+%%%%\[
+%%%%\nonumber
+%%%%{\cal L}_{\rm QED}^{(3)} =
+%%%%~-~{\dgreen a_\mu}\,  \bar \Psi \gamma_\mu \Psi
+%%%%~-~ {\dgreen b_\mu}\,  \bar \Psi \gamma^\mu \gamma_5 \Psi 
+%%%%~-~ \frac{1}{2}{\dgreen H_{\mu\nu}}\bar \Psi \sigma^{\mu\nu} \Psi
+%%%%~-~ {\dgreen k_\mu}\,  
+%%%%\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda~.
+%%%%%\label{LVqed}
+%%%%\]
+%%%%
+%%%%\FromSlide{3}
+%%%%	Dimension three operators create a problem:
+%%%%	from dimensional counting one expects 
+%%%%	{\blue $ a_\mu \sim M n_\mu $}, 
+%%%%	where {\blue $ n_\mu $} is a unit vector, and
+%%%%	$ M $ is the scale of New Physics.
+%%%%	That creates {\myit\blue disastrous} effects.
+%%%%
+%%%%\FromSlide{4}
+%%%%	Even if the LV coefficients are tuned small, they will be 
+%%%%	exploded by quantum corrections coming from quadratic divergencies
+%%%%	of the higher-dimensional operators:
+%%%%\FromSlide{5}
+%%%%\[
+%%%%[LV]_{\rm dim~3} ~~\sim~~ ({\rm loop~factor}) \, 
+%%%%\;\Lambda_{UV}^2\;
+%%%%\times\; [LV]_{{\rm dim}~5}~. 
+%%%%\]
+%%%%
+%%%%	Dimension five operators have to be tuned too \quad
+%%%%	$ \Longrightarrow $ \quad no room for LV interactions.
+%%%%
+%%%%\FromSlide{6}
+%%%%	One of the solutions is if such quadratic divergencies
+%%%%	are suppressed by a {\red symmetry}.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{\small Supersymmetry \fromSlide{5}{rules!}}
+%%%%
+%%%%	Recently it has been proposed that SUSY could provide a 
+%%%%	powerful selection rule on admissible forms of LV interactions.
+%%%%
+%%%%\FromSlide{2}
+%%%%	In particular in the Minimal Supersymmetric Standard Model,
+%%%%	LV operators of dimensions three and four are prohibited
+%%%%	by the requirements of supersymmetry and gauge invariance.
+%%%%
+%%%%	Lorentz-violating interactions start only at dimension five.
+%%%%
+%%%%\FromSlide{3}
+%%%%	Once Supersymmetry is softly broken, dimension three LV
+%%%%	operators can be induced, with coefficients controlled
+%%%%	by the soft-breaking mass scale, 
+%%%%	{\red $ m_s \sim 1~{\rm TeV} $}.	
+%%%%
+%%%%\FromSlide{4}
+%%%%	Dimension three operators are now pure quantum effects, and
+%%%%	effectively, the divergencies are stabilized at the 
+%%%%	supersymmetric threshold:
+%%%%\[
+%%%%[LV]_{\rm dim~3} ~~\sim~~ ({\rm loop~factor}) \, 
+%%%%\;{\red m_{s}^2}\;
+%%%%\times\; [LV]_{{\rm dim}~5}~.
+%%%%\]
+%%%%\FromSlide{5}
+%%%%	$ \Rrightarrow $ This might lead to a solution of the
+%%%%	naturalness problem: why the lower dimensional LV operators
+%%%%	are so much suppressed as compared to their natural scale.
+%%%%
+%%%%%%\rnode{left1}{\strut}
+%%%%%%\[
+%%%%%%\nonumber
+%%%%%%{\cal L}_{\rm QED}^{(3)} = 
+%%%%%%~-~{\black a_\mu}\,  \bar \Psi \gamma_\mu \Psi
+%%%%%%~-~ {\black b_\mu}\,  \bar \Psi \gamma^\mu \gamma_5 \Psi 
+%%%%%%~-~ \frac{1}{2}{\black H_{\mu\nu}}\bar \Psi \sigma^{\mu\nu} \Psi
+%%%%%%~-~ {\black k_\mu}\,  
+%%%%%%\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda~.
+%%%%%%\]
+%%%%%%\rnode{right1}{\strut}
+%%%%%%\ncline[linecolor=red]{left1}{right1}
+%%%%\end{slide}
+%%%%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%\overlays{10}
+%%%%{
+%%%%\begin{slide}[Replace]{\small Questions we ask}
+%%%%
+%%%%\fromSlide{1}{
+%%%%	In our work we have set up the following objectives, confining
+%%%%	ourselves to SQED, but being on a path to the full 
+%%%%	Lorentz-violating MSSM:
+%%%%	}
+%%%%\begin{itemstep}
+%%%%	\item 
+%%%%	\fromSlide{2}
+%%%%	{prove the absence of the naturalness problem in the LV sector}
+%%%%	\item 
+%%%%	\fromSlide{3}{
+%%%%	derive phenomenological constraints on the LV parameters
+%%%%		of SQED}
+%%%%\end{itemstep}
+%%%%
+%%%%\fromSlide{4}{	
+%%%%	In detail, the investigation includes:}
+%%%%\begin{itemstep}
+%%%%	\item 
+%%%%	\fromSlide{5}{
+%%%%		find out whether D-term anomaly (cancellation) is disturbed
+%%%%		by the presence of LV interactions}
+%%%%	\item 
+%%%%	\fromSlide{6}{
+%%%%	prove that gauge anomaly does not arise due to 
+%%%%      	      the LV interactions}
+%%%%	\item
+%%%%	\fromSlide{7}{
+%%%%	derive the Renormalization Group (RG) evolution for the LV
+%%%%	operators, and show that quadratic divergencies do not 
+%%%%	arise in the limit of exact supersymmetry
+%%%%	}
+%%%%	\item
+%%%%	\fromSlide{8}{
+%%%%	investigate the consequences of SUSY breaking by introducing
+%%%%	soft-breaking masses for super-partners of electrons
+%%%%	}
+%%%%	\item
+%%%%	\fromSlide{9}{
+%%%%	one of the most curious questions about dimension three operators 
+%%%%	and a subject of long disputes is the Chern-Simons operator;
+%%%%	we show that it is not induced by SUSY breaking
+%%%%	}
+%%%%	\item
+%%%%	\fromSlide{10}{
+%%%%	study the phenomenological consequences of the soft SUSY breaking;
+%%%%	put constraints on the LV parameters
+%%%%	}
+%%%%\end{itemstep}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{11}
+%%%%{
+%%%%\begin{slide}{\small Lorentz Violation and SQED}
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Blinds}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%\FromSlide{1}
+%%%%	Supersymmetric Quantum Electrodynamics is described by two
+%%%%	chiral superfields 
+%%%%	{\blue $ \Phi_+ $} and 
+%%%%	{\blue $ \Phi_- $}, that are
+%%%%	oppositely charged under a U(1) gauge superfield 
+%%%%	{\blue $ V $}:
+%%%%\FromSlide{2}
+%%%%%%
+%%%%%% The SQED lagrangian
+%%%%\begin{eqnarray*}
+%%%%% first line
+%%%%\mathcal{L}_{\rm SQED} & ~=~
+%%%%&
+%%%%\int d^4\theta\, \Big\{ 
+%%%%   \overline{\Phi}_+ e^{2eV} \Phi_+ ~+~
+%%%%   \overline{\Phi}_- e^{-2eV} {\Phi}_-  \Big\} ~+~ \\
+%%%%% second line
+%%%%%\label{SQED}
+%%%%& + &
+%%%%\int d^2\theta\, \left\lgroup \frac{1}{4}\,  WW ~+~m_e\, \Phi_-\Phi_+ 
+%%%%	\right\rgroup ~+~
+%%%%\int d^2\overline{\theta}\, 
+%%%%\left\lgroup \frac{1}{4}\, \overline{W}\,\overline{W} ~+~ 
+%%%%\overline{m}_e\, \overline{\Phi}_+\overline{\Phi}_- 
+%%%%\right\rgroup~. 
+%%%%% third line
+%%%%\nonumber 
+%%%%\end{eqnarray*}
+%%%%%
+%%%%
+%%%%\FromSlide{3}
+%%%%	In analogy to the ordinary LV operators, supersymmetric 
+%%%%	LV operators can be constructed of the 
+%%%%\FromSlide{4}
+%%%%	fundamental
+%%%%	{\blue super}fields {\blue $ \Phi_+ $} and 
+%%%%	{\blue $ \Phi_- $}, 
+%%%%\FromSlide{5}
+%%%%	and {\blue super}gauge covariant
+%%%%	derivatives 
+%%%%	{\blue $ \nabla_\alpha $, $ \overline{\nabla}_{\dot\alpha} $}
+%%%%\FromSlide{6}
+%%%%	and {\blue $ T^{\mu\nu\rho\sigma\dots} $} ---
+%%%%	{\myit arbitrary} constant tensor coefficients with
+%%%%	Lorentz indices that specify the breakdown of the Lorence
+%%%%	invariance.
+%%%%
+%%%%\FromSlide{7}
+%%%%	We require that all LV operators be
+%%%%\begin{itemize}
+%%%%\FromSlide{8}
+%%%%\item supersymmetric 
+%%%%\FromSlide{9}
+%%%%\item local super gauge invariant with chiral gauge parameters
+%%%%\FromSlide{10}
+%%%%\item have local component expressions. 
+%%%%\end{itemize}
+%%%%
+%%%%\FromSlide{11}
+%%%%	This is enough to rule out the dimension three and four 
+%%%%	interactions, in particular the {\myit
+%%%%	Chern-Simons operator} --- 
+%%%%	{\blue
+%%%%	$ k_\mu\,  
+%%%%\epsilon^{\mu\nu\kappa\lambda} A_\nu \partial_\kappa A_\lambda $}.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}{ CPT-violating dimension five LV operators }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Glitter}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%	
+%%%%	It turns out that the requirements of SUSY and gauge invariance
+%%%%	greatly reduce the number of LV operators.
+%%%%
+%%%%	At dimension five level, SQED is compatible with only 3 operators:
+%%%%
+%%%%\FromSlide{2}
+%%%%	A matter operator, parameterized by a vector LV background
+%%%%	{\red $ N_\pm^\mu $}:
+%%%%%%
+%%%%%% the electron and positron operators
+%%%%\[
+%%%%%\label{LV_matter}
+%%%%  \mathcal{L}_{\mathrm{LV}}^{\mathrm{matter}} ~=~ 
+%%%%\frac{1}{M}\,   \int d^4\theta \Big\{ 
+%%%%% electron
+%%%%{\red{N_+^\mu}}\, \overline{\Phi}_+ e^{2eV} i \nabla_\mu \Phi_+ 
+%%%%% positron
+%%%%~+~ 
+%%%%{\red N_{-}^\mu}\, \overline{\Phi}_- e^{-2eV} i \nabla_\mu  {\Phi}_-
+%%%%                 \Big\}~, 
+%%%%\]
+%%%%%
+%%%%	
+%%%%\FromSlide{3}
+%%%%	an operator in the gauge sector, parameterized by a(nother)
+%%%%	vector LV background {\red $ N^\mu $}:
+%%%%%% photon -- Kahler term
+%%%%\[
+%%%%%\label{LV_gauge}
+%%%%\mathcal{L}_{\mathrm{LV\ dim\ 5}}^{\mathrm{gauge\ (V)}} ~=~ 
+%%%%\frac 1M \int d^4\theta \, 
+%%%%{\red N^\kappa}\, \overline{W} \bar{\sigma}_\kappa W~,   
+%%%%\]
+%%%%%
+%%%%\FromSlide{4}
+%%%%	and another operator of the gauge sector, written as a 
+%%%%	superpotential, and parameterized
+%%%%	by a {\myit real irreducible 3-rank tensor} {\red $T^{\mu\nu\rho}$}:
+%%%%%% photon -- superpotential term
+%%%%\[
+%%%%%\label{LV_gauge_Tterm}
+%%%%\mathcal{L}_{\mathrm{LV\ dim\ 5}}^{\mathrm{gauge\ (T)}} ~=~ 
+%%%%\frac 1{4M} 
+%%%%\int d^2\theta \, {\red T^{\lambda\, \mu\nu}} \,
+%%%%        W \sigma_{\mu\nu} \, \partial_\lambda W  
+%%%%~+~ \frac 1{4M} 
+%%%%\int d^2\theta \, {\red \overline{T}^{\lambda\, \mu\nu}} \,
+%%%%        \overline{W} \,\bar{\sigma}_{\mu\nu}\, \partial_\lambda\overline{W}  
+%%%%~.
+%%%%\]
+%%%%%
+%%%%\FromSlide{5}
+%%%%	In a non-abelian theory the last operator does not exist.
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}{ CPT-conserving dimension 6 operators }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Blinds}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%	At the dimension 6 level, the set of operators is more diverse.
+%%%%\FromSlide{2}
+%%%%	In the gauge sector, there is only one operator, 
+%%%%	{\myit superpotential} operator:
+%%%%\begin{gather} 
+%%%%\nonumber
+%%%%{\cal L}_{\rm{LV\ dim\ 6}}^{\rm{super}} ~=~ \frac{1}{M^2}
+%%%%\int d^2 \theta \, 
+%%%%%\Big( 
+%%%%%A^{\mu\nu} \, \Phi_+ \Phi_-\, W \sigma_{\mu\nu} W ~+~ 
+%%%%%B^{\mu\nu} \, W \sigma_{\mu\nu} \Box W ~+~ 
+%%%%%C^{\mu\nu} \, W \sigma_{\mu\rho} \partial_\nu \partial^\rho W 
+%%%%%\nonumber \\[2ex]
+%%%%%~+~ 
+%%%%{\red S^{\mu\nu}}\, W \partial_\mu \partial_\nu W 
+%%%%%~+~ T^{\mu\nu\, \rho\sigma} \, 
+%%%%%W \sigma_{\mu\nu} \partial_\rho \partial_\sigma W 
+%%%%%\Big) 
+%%%%~+~ \text{h.c.}~,\qquad  {\red S^{\mu\nu}} = {\red S^{\nu\mu}}~. 
+%%%%%\label{LV_dim6_Fterm}
+%%%%\end{gather}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	However, in the matter sector, there are 3 types LV interactions:
+%%%%%
+%%%%\begin{gather*}
+%%%%{\cal L}_{\rm LV\ dim\ 6}^{\rm matter}  ~=~ \frac{1}{M^2}
+%%%%\int d^4 \theta\, \Big[
+%%%%\overline{\Phi}_\pm e^{\pm 2eV} \Phi_\pm \, 
+%%%%\left\lgroup 
+%%%%{\red A_\pm^{\mu\nu}} \, D \sigma_{\mu\nu} W ~+~ 
+%%%%{\red \overline{A}_\pm^{\mu\nu}} \, 
+%%%%	\overline{D} \bar\sigma_{\mu\nu} \overline{W}
+%%%%\right\rgroup 
+%%%%\nonumber \\[2ex]
+%%%%~+~ 
+%%%%{\red S_\pm^{\mu\nu}}\,  \overline{\Phi}_\pm e^{\pm 2eV} 
+%%%%\lbrace \nabla_\mu, \nabla_\nu \rbrace \Phi_\pm  
+%%%%~+~ 
+%%%%{\red Z^{\mu\nu}}\,  \Phi_- \lbrace \nabla_\mu, \nabla_\nu \rbrace \Phi_+ 
+%%%%~+~ 
+%%%%{\red \overline{Z}^{\mu\nu}}\,  
+%%%%\overline{\Phi}_- \lbrace \nabla_\mu, \nabla_\nu \rbrace \overline{\Phi}_+ 
+%%%% \Big]~, 
+%%%%% \label{LV_dim6_Dterm}
+%%%%\end{gather*}
+%%%%%
+%%%%\FromSlide{4}
+%%%%	The terms 
+%%%%{\red
+%%%%$ F_{\mu\rho}F_{\nu\sigma}F^{\rho\sigma} $}
+%%%%	and
+%%%%{\red
+%%%%$ F_{\rho\sigma}F^{\rho\sigma}F_{\mu\nu} $}
+%%%%	have not appeared, although they {\myit do} appear
+%%%%	in non-commutative SQED. 
+%%%%	However, they are incompatible with conventional ``commuting''
+%%%%	supersymmetry.
+%%%%
+%%%%\FromSlide{5}
+%%%%	{\myit We will be interested in dimension 5 operators only. }
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{ Absence of the $D$-term anomaly }
+%%%%\vspace{-0.5cm}
+%%%%	Generically, supersymmetry is free of dangerous quadratic
+%%%%	divergencies.
+%%%%\FromSlide{2}
+%%%%	However, there is one exception, the $ D $-term anomaly:
+%%%%
+%%%%\begin{center}
+%%%%	\includegraphics[height=1.0cm,keepaspectratio]{diag_FI2.ps}
+%%%%\end{center}
+%%%%\FromSlide{3}
+%%%%	where
+%%%%\[
+%%%%        V ~=~  -~ \theta\,\sigma^\mu\, \overline{\theta}\, A_\mu ~+~
+%%%%                i \theta^2\, \overline{\theta}\, \overline{\lambda} 
+%%%%                ~-~
+%%%%                i \overline{\theta}{}^2\, \theta\lambda
+%%%%                ~+~
+%%%%                \frac{1}{2}
+%%%%                \theta^2\overline{\theta}{}^2\, D~.
+%%%%\]
+%%%%\FromSlide{4}
+%%%%	If we introduce an ``exact'' LV propagator	
+%%%%%
+%%%%\[
+%%%%\raisebox{-1ex}{\includegraphics[width=1.4cm,keepaspectratio]{diag_resmprop.ps}}
+%%%%\quad = \quad 
+%%%%\frac 1{\Box}~  \frac 1{1 ~+~  \frac{ N_\pm^\mu} M \, i\partial_\mu}~, 
+%%%%\]
+%%%%%
+%%%%\FromSlide{5}
+%%%%	then we come to a cancellation:
+%%%%%
+%%%%\[
+%%%%\raisebox{-3.0ex}{\includegraphics[height=1.0cm,keepaspectratio]{diag_FI1.ps}}
+%%%%\quad = \quad 
+%%%%\raisebox{-3.0ex}{\includegraphics[height=1.0cm,keepaspectratio]{diag_FI2.ps}}
+%%%%\quad = \quad 0~,
+%%%%\]
+%%%%	which vanishes for non-anomalous theories, where the sum of 
+%%%%	charges is zero.
+%%%%%
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{ $ D $-term at higher loops }
+%%%%
+%%%%	At two loops, one should consider more complicated situations,
+%%%%\FromSlide{2}
+%%%%%
+%%%%\[
+%%%%\raisebox{-3.8ex}{\includegraphics[height=1.2cm,keepaspectratio]{diag_2loop1.ps}}
+%%%%\quad + \quad 
+%%%%\raisebox{-3.8ex}{\includegraphics[height=1.2cm,keepaspectratio]{diag_2loop2.ps}}
+%%%%~,
+%%%%\]
+%%%%%
+%%%%\FromSlide{3}
+%%%%	which by some standard superFeynman technique can be transformed
+%%%%	into
+%%%%%
+%%%%\[
+%%%%\raisebox{-4.0ex}{\includegraphics
+%%%%	[height=1.2cm,keepaspectratio]{diag_2loop3.ps}}
+%%%%\quad + \quad 
+%%%%\raisebox{-4.0ex}{\includegraphics
+%%%%	[height=1.2cm,keepaspectratio]{diag_2loop4.ps}}
+%%%%\fromSlide{4}{
+%%%%	\quad = \quad 0~.
+%%%%	}
+%%%%\]
+%%%%
+%%%%%%\FromSlide{4}
+%%%%%%\[
+%%%%%%\raisebox{-4.0ex}{\includegraphics
+%%%%%%	[height=1.2cm,keepaspectratio]{diag_2loop3.ps}}
+%%%%%%\quad + \quad 
+%%%%%%\raisebox{-4.0ex}{\includegraphics
+%%%%%%	[height=1.2cm,keepaspectratio]{diag_2loop4.ps}} 
+%%%%%%	\quad = \quad 0~.
+%%%%%%\]
+%%%%%
+%%%%\FromSlide{5}
+%%%%	In general, if one uses the {\myit background superfield
+%%%%	formalism}, any tadpole diagram will be an identical zero:
+%%%%\[
+%%%%	\raisebox{-3.5ex}{
+%%%%	\includegraphics[height=1.0cm,keepaspectratio]{diag_FI2.ps}}
+%%%%	\quad \equiv 0 ~.
+%%%%\]
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{3}
+%%%%{
+%%%%\begin{slide}[Replace]{ Absence of Gauge Anomaly }
+%%%%	
+%%%%\FromSlide{2}
+%%%%	One can use the technique developed by Fujikawa and Konishi.
+%%%%
+%%%%	Our classical LV action is
+%%%%%
+%%%%\begin{equation*}
+%%%%S ~=~ \int d^8z\, \overline{\Phi} 
+%%%%e^V \Big(1 ~+~ i {\red N^\mu}\, \nabla_\mu  \Big) \Phi~, 
+%%%%\end{equation*}
+%%%%%
+%%%%	
+%%%%\FromSlide{3}
+%%%%	One considers the variation of the effective action obtained
+%%%%	by integrating out the chiral superfield
+%%%%	{\blue $ \Phi_+ $}, under a chiral gauge transformation
+%%%%	{\blue $ \delta \Lambda $}:
+%%%%
+%%%%%
+%%%%\begin{equation*}
+%%%%\delta_\Lambda\Gamma(V) ~=~ 
+%%%%\langle \delta_\Lambda S \rangle = 
+%%%%\Big\langle \int d^8z\,  \overline{\Phi} 
+%%%%e^V \Big(1 ~+~ i N^\mu \nabla_\mu  \Big) (\delta \Lambda\, \Phi)
+%%%%\Big\rangle~.
+%%%%%\label{vareffact}
+%%%%\end{equation*} 
+%%%%%
+%%%%
+%%%%	Plugging in an effective propagator for {\blue $ \Phi_+$}
+%%%%	in the presence of the background field {\blue $ V $}
+%%%%	one then notes that the LV part completely cancels out
+%%%%	leaving the gauge variation the same as in the Lorentz
+%%%%	invariant theory.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{RG Evolution of LV Parameters}
+%%%%\vspace{-0.5cm}
+%%%%	For renormalization of the LV parameters of the dimension 5
+%%%%	operators, one computes the following diagrams:
+%%%%\FromSlide{2}
+%%%%\begin{center}
+%%%%\begin{tabular}{cccc}
+%%%%\includegraphics[width=2.0cm,keepaspectratio]{diag_chiral_B.ps}
+%%%%&
+%%%%\includegraphics[width=2.0cm,keepaspectratio]{diag_chiral_D.ps}
+%%%%&
+%%%%\includegraphics[width=2.0cm,keepaspectratio]{diag_chiral_A.ps}
+%%%%&
+%%%%\includegraphics[width=2.0cm,keepaspectratio]{diag_chiral_E.ps}
+%%%%\end{tabular}
+%%%%\end{center}
+%%%%	in the chiral sector and
+%%%%\FromSlide{3}
+%%%%\begin{center}
+%%%%\begin{tabular}{cc}
+%%%%\includegraphics[width=2.2cm,keepaspectratio]{diag_gauge_A.ps}
+%%%%&
+%%%%\includegraphics[width=2.2cm,keepaspectratio]{diag_gauge_F.ps}
+%%%%\end{tabular}
+%%%%\end{center}
+%%%%	in the gauge sector.
+%%%%
+%%%%\FromSlide{4}
+%%%%	One then obtains and solves the following RG equation:
+%%%%%%
+%%%%%% Undiagonalized RG equation
+%%%%%%
+%%%%\begin{equation*}
+%%%%%\label{RG_eqn_undiag}
+%%%%     \mu \frac{\partial}
+%%%%              {\partial\mu} 
+%%%%                \left(
+%%%%\begin{array}{c}
+%%%%               \red{N^\nu} \\ 
+%%%%   \red{N_+^\nu} \\
+%%%%                   \red{N_{-}^\nu} \\
+%%%%   \red{T^{\mu\nu\rho}}
+%%%%                \end{array} \right) ~=~  
+%%%%     \frac{\alpha}
+%%%%          {2 \pi} \, 
+%%%%     \left(\begin{array}{rrrr}
+%%%%                    2 & -1 & -1 & ~~0 \\
+%%%%   -6 &  3 &  0 & ~~0 \\
+%%%%                   -6 &  0 &  3 & ~~0 \\
+%%%%    0 &  0 &  0 & ~~2
+%%%%           \end{array}\right)
+%%%%     \left(
+%%%%  \begin{array}{c}
+%%%%                 \red{N^\nu} \\ 
+%%%% \red{N_+^\nu} \\
+%%%%                 \red{N_{-}^\nu} \\
+%%%% \red{T^{\mu\nu\rho}}
+%%%%          \end{array} \right)~.
+%%%%\end{equation*}
+%%%%%
+%%%%\FromSlide{5}
+%%%%	For RG evolving the parameters from 
+%%%%{\red $M = M_{\rm Pl} \approx 10^{19}$ GeV} to
+%%%%{\red $\mu = m_{s} \approx 1$ TeV} one obtains a change in the 
+%%%%LV parameters of only about {\red 10\%}.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{6}
+%%%%{
+%%%%\begin{slide}{ Soft Supersymmetry Breaking }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Dissolve}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%	We give a mass splitting to the scalar electron (and positron),
+%%%%	and ignore gaugino masses.
+%%%%\FromSlide{2}
+%%%%	SUSY breaking masses for the electron and positron can be 
+%%%%	written as
+%%%%%%
+%%%%%% SB vertex
+%%%%\begin{equation*}
+%%%%%\label{SB_vertex}
+%%%%  \mathcal{L}_{\rm SB} ~=~  
+%%%%- \int d^2\theta ~ \theta^2~ 
+%%%%({\red m_{s}^0})^2 \, \Phi_+ \Phi_-
+%%%%~+~ \text{h.c.} 
+%%%%~- \int d^4\theta ~
+%%%%\theta^2\overline{\theta}{}^2~ 
+%%%%\Big\lgroup 
+%%%%({\red m_s^+})^2\, \overline{\Phi}_+ \Phi_+ 
+%%%%~+~
+%%%%({\red m_s^-})^2\, \overline{\Phi}_- \Phi_-
+%%%%\Big\rgroup  
+%%%%~. 
+%%%%\end{equation*}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	Once SUSY is broken, dimension 3 operators are allowed.
+%%%%\FromSlide{4}
+%%%%	Generically, in the SQED field content, written a la
+%%%%	Kostelecky, there are the following dimension 3 interactions:
+%%%%%
+%%%%\begin{eqnarray*}
+%%%%% first line
+%%%%%\nonumber
+%%%%{\cal L}_{\rm SB~LV~dim~3}^{\rm matter} 
+%%%%&~=~& 
+%%%%2\;i\, {\dgreen \wt{A}_+^\mu}\, \overline{z}_+ \mathcal{D}_\mu z_+ 
+%%%%~+~ 2\;i\, {\dgreen \wt{A}_-^\mu}\, \overline{z}_-\mathcal{D}_\mu z_- 
+%%%%~+~i\, {\dgreen \wt{C}^\mu}\, z_- \mathcal{D}_\mu z_+ 
+%%%%%\label{LV_dim3_comp}
+%%%%\\[1ex] 
+%%%%% third line
+%%%%\nonumber
+%%%%&& 
+%%%%~+~{\dgreen \wt{B}_+^\mu}\, \overline{\psi}_+\overline{\sigma}_\mu \psi_+ 
+%%%%~+~ {\dgreen \wt{B}_-^\mu}\, \overline{\psi}_-\overline{\sigma}_\mu \psi_-
+%%%% ~+~{\dgreen \wt{D}^{\mu\nu}}\, \psi_- \sigma_{\mu\nu} \psi_+~
+%%%%\end{eqnarray*}
+%%%%%
+%%%%	in the matter sector and 
+%%%%\FromSlide{5}
+%%%%%%
+%%%%%% Gauge dimension 3 operators in components
+%%%%\begin{eqnarray*}
+%%%%{\cal L}_{\rm SB~LV~dim~3}^{\rm gauge} ~=~ 
+%%%%\onlySlide*{5}{
+%%%%	\rnode{A}{
+%%%%	{\dgreen \wt{E}_\mu}\, \epsilon^{\mu\nu\rho\sigma}\, 
+%%%%	}
+%%%%	A_\nu \partial_\rho A_\sigma  
+%%%%}
+%%%%\fromSlide*{6}{
+%%%%	\rnode{A}{
+%%%%	{\dgreen \wt{E}_\mu}\, {\black \epsilon^{\mu\nu\rho\sigma}}\, 
+%%%%	}
+%%%%	{\black A_\nu \partial_\rho A_\sigma}
+%%%%}
+%%%%~+~ 
+%%%%{\dgreen \wt{F}_\mu}\, \lambda \sigma^\mu \overline{\lambda} 
+%%%%~
+%%%%\end{eqnarray*}
+%%%%%
+%%%%	in the gauge sector, 
+%%%%\FromSlide{6}
+%%%%	including the \rnode{B}{Chern-Simons} term.
+%%%%\fromSlide*{6}{\ncline[linecolor=red,nodesep=0.5mm]{->}{B}{A}}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{4}
+%%%%{
+%%%%\begin{slide}[Replace]{ Dimension 3 Operators in the Matter Sector }
+%%%%
+%%%%	There are two types of reduction of operators dimension 3 
+%%%%	$ \to $ dimension 5:
+%%%%%% mechanisms of dim 5 -> dim 3 reduction
+%%%%\begin{equation}
+%%%%\begin{array}{l c r l} 
+%%%%\, [LV]_{\rm dim~5} & ~\stackrel{\mathrm {EOM}}{\longrightarrow}~ &
+%%%%  (m_{s}^2 + m_e^2)\, [LV]_{\rm dim~3}~,~ &{\rm for~selectrons}~, 
+%%%%\\[1ex] \,
+%%%%[LV]_{\rm dim~5} &~ \stackrel{\mathrm {1\ loop}}{\longrightarrow}~ &
+%%%%  m_{s}^2\, [LV]_{\rm dim~3}~,~ & {\rm for~fermions ~and ~vector~bosons}
+%%%%~.
+%%%%\end{array}
+%%%%\nonumber
+%%%%\end{equation}
+%%%%%
+%%%%\FromSlide{2}
+%%%%	Phenomenologically interesting are seemingly only the operators
+%%%%%
+%%%%\begin{eqnarray*}
+%%%%% first line
+%%%%%\nonumber
+%%%%\lefteqn{
+%%%%	{\cal L}_{\rm dim~3~phen}^{\rm matter} =
+%%%%	}
+%%%%	\\
+%%%%% second line
+%%%%	&& =~
+%%%%  {\dgreen \wt{B}_+^\mu}\, \overline{\psi}_+\overline{\sigma}_\mu \psi_+ 
+%%%%~+~ {\dgreen \wt{B}_-^\mu}\, \overline{\psi}_-\overline{\sigma}_\mu \psi_-
+%%%%\fromSlide{3}{
+%%%% ~+~ 2\;i\, {\dgreen \wt{A}_+^\mu}\, \overline{z}_+ \mathcal{D}_\mu z_+ 
+%%%%~+~ 2\;i\, {\dgreen \wt{A}_-^\mu}\, \overline{z}_-\mathcal{D}_\mu z_- 
+%%%%	~.}
+%%%%\end{eqnarray*}
+%%%%%
+%%%%\FromSlide{4}
+%%%%	On the equations of motion, dimension 5 operators induce
+%%%% \begin{equation*}
+%%%%{\dgreen \wt{A}_\pm^\mu} ~=~  
+%%%%\pm\, 2\, \frac{{\red N_V^\mu}}{ M }  \, 
+%%%%(m_e^2 \, +\,  m_s^2)~.
+%%%%\end{equation*}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{3}
+%%%%{
+%%%%\begin{slide}[Replace]{ 1-loop Corrections to Matter Dimension 3 Operators }
+%%%%
+%%%%	Including 1-loop corrections induced by dimension 5 operators
+%%%%\vspace{0.3cm}
+%%%%\begin{center}
+%%%%\includegraphics[width=2.4cm,height=2.7cm,keepaspectratio]
+%%%% {diag_chiral_SB_chiral_LV_A.ps} 
+%%%%%\includegraphics[width=2.7cm,height=2.7cm,keepaspectratio]
+%%%%% {diag_chiral_SB_chiral_LV_B.ps} 
+%%%%\includegraphics[width=2.4cm,height=2.7cm,keepaspectratio]
+%%%% {diag_chiral_SB_chiral_LV_C.ps} 
+%%%%%\includegraphics[width=2.7cm,height=2.7cm,keepaspectratio]
+%%%%% {diag_chiral_SB_chiral_LV_D.ps}
+%%%%\includegraphics[width=2.4cm,height=2.7cm,keepaspectratio]
+%%%% {diag_chiral_SB_gauge_LV.ps}
+%%%%\end{center}
+%%%%\FromSlide{2}
+%%%%	one arrives at the RG equations
+%%%%%%                  
+%%%%%% RG equations for A^\mu and B^\mu
+%%%%\begin{eqnarray*}
+%%%%%\label{RG_AB}
+%%%%% A^\mu
+%%%%\nonumber
+%%%%\mu\frac{d {\dgreen \wt{A}_+^\nu}}{d\mu} 
+%%%%& ~=~ &
+%%%%\frac{\alpha}{\pi} \,  \Big\lgroup  {\dgreen \wt{A}_+^\nu}
+%%%%~-~{\dgreen \wt{B}_+^\nu} \Big\rgroup~, 
+%%%%        \\
+%%%%% B^\mu
+%%%%\mu\frac{d {\dgreen \wt{B}_+^\nu}}{d\mu} 
+%%%%& ~=~ &
+%%%%\frac{\alpha}{2\pi} \, \Big\lgroup
+%%%%{\dgreen \wt{B}_+^\nu}  ~-~ {\dgreen \wt{A}_+^\nu}  
+%%%%~+~3\, \frac{(m_s^+)^2}{M}\, {\red N^\nu}
+%%%%~-~2\, \frac{(m_s^+)^2}{M}\, {\red N_+^\nu}
+%%%%\Big\rgroup~,
+%%%%\end{eqnarray*}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	with a leading $ \alpha \log $ solution
+%%%%%%
+%%%%%% The induced coefficient B_\mu
+%%%%\begin{equation*}
+%%%%{\dgreen \wt{B}^{\pm\nu}} (m_s) ~=~ \frac{\alpha}{\pi}\, 
+%%%%\log ( M/m_s )\,
+%%%%\frac{(m_{s}^\pm)^2 }{M}\, 
+%%%%\Bigg\{ 
+%%%%\frac{3}
+%%%%     {2} {\red N^\nu}(M) 
+%%%%~-~ {\red N_\pm^{\,\nu}}(M)
+%%%%\Bigg\}~.
+%%%%\end{equation*}
+%%%%%
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{4}
+%%%%{
+%%%%\begin{slide}[Replace]{ 1-loop Induced Gauge Dimension 3 Operators }
+%%%%
+%%%%	The answer for gauge operators is given by
+%%%%\vspace{0.5cm}
+%%%%\begin{center}
+%%%%\includegraphics[width=2.3cm,keepaspectratio]
+%%%% {diag_gauge_SB_chiral_LV_A.ps} 
+%%%%\includegraphics[width=2.3cm,keepaspectratio]
+%%%% {diag_gauge_SB_chiral_LV_C.ps} 
+%%%%\includegraphics[width=2.3cm,keepaspectratio]
+%%%% {diag_gauge_SB_chiral_LV_D.ps} 
+%%%%\includegraphics[width=2.3cm,keepaspectratio]
+%%%% {diag_gauge_SB_chiral_LV_F.ps} 
+%%%%\includegraphics[width=2.3cm,keepaspectratio]
+%%%% {diag_gauge_SB_chiral_LV_H.ps} 
+%%%%\end{center}
+%%%%\vspace{0.5cm}
+%%%%\FromSlide{2}
+%%%%	If one is interested only in the observable sector, 
+%%%%	{\myit i.e.} photons, the result is
+%%%%\FromSlide{3}
+%%%%\[
+%%%%	{\dgreen \wt{E}^\mu} ~=~ 0~.
+%%%%\]
+%%%%\FromSlide{4}
+%%%%	The {\myit Chern-Simons term is not generated} whether in
+%%%%	a SUSY or in a SUSY-breaking theory.
+%%%%
+%%%%	This is also confirmed by the Coleman-Glashow theorem.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{5}
+%%%%{
+%%%%\begin{slide}[Replace]{ Phenomenology: Component Form of the Chiral Operators }
+%%%%
+%%%%\vspace{-0.5cm}
+%%%%	In order to put limits on the dimension 5 LV operators, one
+%%%%	obtains a component form of them.
+%%%%\FromSlide{2}
+%%%%	The chiral operator 
+%%%%$ {\red {N_+^\mu}}\, \overline{\Phi}_+ e^{2eV} i \nabla_\mu \Phi_+ $
+%%%%	(and similarly the one with {\red $ N_-^\mu $}) 
+%%%%	can be expanded into
+%%%%\FromSlide{3}
+%%%%%%
+%%%%%% The electron LV operator in components with Weyl spinors; 
+%%%%%% totally unresolved
+%%%%\begin{gather*}
+%%%%% the 1st line
+%%%%\nonumber
+%%%%  \mathcal{L}_{\mathrm{LV~dim~5}}^{\mathrm{matter\,(+)}} 
+%%%%~ =~ \frac{\red N_+^\mu}{M} \Big[~
+%%%%    i \bar{F}_+ \mathcal{D}_\mu F_+ ~+~
+%%%%    i e \bar{z}_+ D \mathcal{D}_\mu z_+ ~-~
+%%%%    i e \mathcal{D}_\mu(\bar{z}_+) D z_+ 
+%%%%~+~ 
+%%%%  \frac{1}{2}\bar{\psi}_+\mathcal{D}_{(\mu}\mathcal{D}_{\nu)}
+%%%%               \bar{\sigma}^\nu \psi_+ 
+%%%%\nonumber \\
+%%%%% the 3rd line
+%%%%  + ~ 
+%%%%    i e \frac{\sqrt{2}}{2} \Big\{
+%%%%               \overline{\psi}_+\bar\sigma_\mu\lambda F_+ 
+%%%%       ~-~
+%%%%               \overline{F}_+\overline{\lambda} \bar\sigma_\mu \psi_+
+%%%%                         \Big\}  ~+~
+%%%%    e^2 \bar{z}_+ \Big\{
+%%%%               \lambda\sigma_\mu\bar{\lambda} 
+%%%%       ~-~
+%%%%               \overline{\lambda}\bar\sigma_\mu\lambda 
+%%%%                       \Big\} z_+ 
+%%%%~+~ 
+%%%%    \frac{1}{2} e \overline{\psi}_+\bar\sigma_\mu D\psi_+
+%%%%% the 5th line
+%%%%\nonumber \\
+%%%%\nonumber
+%%%% -~ 
+%%%%   \sqrt{2} e \Big\{ 
+%%%%                     \mathcal{D}_\mu(\overline{\psi}_+)\overline{\lambda} z_+ 
+%%%%     ~+~ 
+%%%%                     \bar{z}_+ \lambda \mathcal{D}_\mu \psi_+ 
+%%%%                     \Big\} 
+%%%%    ~-~ 
+%%%%    \frac{\sqrt{2}}{2} e \Big\{ 
+%%%%                      \overline{\psi}_+\bar\sigma^\nu\sigma_\mu 
+%%%%                     \bar{\lambda}\mathcal{D}_\nu z_+ +
+%%%%                     \mathcal{D}_\nu(\bar{z}_+)\lambda\sigma_\mu
+%%%%                     \bar{\sigma}^\nu \psi_+
+%%%%                     \Big\}
+%%%%   \\
+%%%%% the 7th line
+%%%%  ~ -~
+%%%%  \frac{1}{4} e \bar{\psi}_+\epsilon_\mu{}^{\nu\rho\sigma}
+%%%%              F_{\rho\sigma} \bar{\sigma}_\nu \psi_+
+%%%%   ~+~
+%%%%  i \bar{z_+} \mathcal{D}^\nu \mathcal{D}_\mu \mathcal{D}_\nu z_+ 
+%%%%   ~+~
+%%%%   \frac{1}{2} i e \mathcal{D}_\nu (\bar{z}_+) \epsilon_\mu{}^{\nu\rho\sigma}
+%%%%              F_{\rho\sigma} z_+ \, 
+%%%%   \Big] ~.
+%%%%%\label{LV_electron_comp}
+%%%%\end{gather*}
+%%%%%
+%%%%\FromSlide{4}
+%%%%	On the equations of motion, in the observable sector this 
+%%%%	produces
+%%%%%%
+%%%%%% Resolved LV operators in the quark sector in Dirac spinors
+%%%%\begin{equation*}
+%%%%%% first line
+%%%%   \mathcal{L}_{\rm LV}^{\rm matter} ~=~ 
+%%%%% 1st operator
+%%%%        -
+%%%%       \frac{{\red N_A^\mu}}
+%%%%              {M} \, \frac{1}{2}e \,
+%%%%       \overline{\Psi} \widetilde{F}_{\mu\nu}
+%%%%% \epsilon_{\mu\nu\rho\sigma} F^{\rho\sigma}
+%%%%                       \gamma_\nu \Psi 
+%%%%% 2nd operator
+%%%%     ~-~
+%%%%        \frac{{\red N_V^\mu}}
+%%%%              {M} \, \frac{1}{2}e \,
+%%%%       \overline{\Psi} \widetilde{F}_{\mu\nu}
+%%%%%\epsilon_{\mu\nu\rho\sigma} F^{\rho\sigma}
+%%%%                       \gamma^\nu \gamma^5 \Psi 
+%%%%% 3rd operator
+%%%%~+~  \frac{{\red N_V^\mu}}{M} \,m_e^2\, \overline{\Psi} \gamma_\mu \Psi
+%%%%     ~,
+%%%%%\label{resolved_LV_Dirac}
+%%%%\end{equation*}
+%%%%%
+%%%%\FromSlide{5}
+%%%%	where the definite parity operators are
+%%%%%%
+%%%%%% definition of N_V, N_A
+%%%%\begin{equation*}
+%%%%      {\red N^\mu_V} ~=~  \frac{ {\red N_+^\mu} ~-~ {\red N_-^\mu} }{2}~,   
+%%%%\qquad 
+%%%%      {\red N^\mu_A} ~=~  \frac{ {\red N_+^\mu} ~+~ {\red N_-^\mu} }{2}~.
+%%%%\end{equation*}
+%%%%%
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{6}
+%%%%{
+%%%%\begin{slide}[Replace]{ Phenomenology: Component Form of the Gauge Operators }
+%%%%
+%%%%	The $ D $-term operator 
+%%%%$ \frac 1M \int d^4\theta \, 
+%%%%{\red N^\kappa}\, \overline{W} \bar{\sigma}_\kappa W $
+%%%%	written in components looks as 
+%%%%\FromSlide{2}
+%%%%%%
+%%%%%% gauge Kahler term in components
+%%%%\begin{equation*}
+%%%%%\lefteqn{
+%%%%\mathcal{L}_{\mathrm{LV~dim~5}}^{\mathrm{gauge\ (K)}} 
+%%%% ~=~ \frac{\red N^\mu}{M}\,  
+%%%%\Big\lgroup 
+%%%%2\, \overline{\lambda}\,\gamma_\mu\, \Box\, 
+%%%%   \lambda 
+%%%%~+~
+%%%%2\, \lambda\, \partial_\mu \slashed{\partial}\, 
+%%%%   \overline{\lambda} 
+%%%%~-~ 
+%%%%2\, D\, \partial^\nu F_{\mu\nu}
+%%%%~+~ 
+%%%%\partial_\lambda F^{\lambda\nu}\, 
+%%%%\widetilde{F}_{\nu\mu} 
+%%%%\Big\rgroup~,
+%%%%\end{equation*}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	which on the equations of motion turns into
+%%%%%%                                             __
+%%%%%% Observable operator induced on EOM from the WnW
+%%%%\begin{equation*}
+%%%%%\label{LV_induced_by_gauge_K}
+%%%%        \mathcal{L}_{\rm gauge\ (K)}^{\rm EOM} ~=~  
+%%%% e\, \overline{\Psi}\, {\red N^\mu} \gamma^\nu
+%%%%\widetilde{F}_{\mu\nu}\, \Psi~.
+%%%%\end{equation*}
+%%%%%
+%%%%\FromSlide{4}
+%%%%	The tensor operator 
+%%%%$ \frac 1{4M} 
+%%%%\int d^2\theta \, {\red T^{\lambda\, \mu\nu}} \,
+%%%%        W \sigma_{\mu\nu} \, \partial_\lambda W  
+%%%%~+~ {\rm h.c.} ~$
+%%%%	in components is
+%%%%\FromSlide{5}
+%%%%%%
+%%%%%% gauge Tensor term in components
+%%%%\begin{equation*}
+%%%%% first line
+%%%%\mathcal{L}_{\mathrm{LV~dim~5}}^{\mathrm{gauge\ (T)}}  
+%%%%      ~  =~ 
+%%%%\frac{2\,{\red T_{\mu\nu\rho}}}{M}
+%%%%\Big( 
+%%%%F^{\nu\lambda}\partial^\mu F^\rho_{\phantom{\rho}\lambda}
+%%%%\,-\, D\, \partial^\mu \widetilde{F}^{\nu\rho} 
+%%%%\,-\,\overline{\lambda}\, \partial^\mu \partial_\sigma
+%%%%\overline{\sigma}_\tau \lambda\; \epsilon^{\sigma\tau\nu\rho}
+%%%%\Big)~.
+%%%%\end{equation*}
+%%%%\FromSlide{6}
+%%%%	At tree level this induces
+%%%%%%
+%%%%%% observable terms generated by reduction of the T-term
+%%%%%% on the EOM
+%%%%\begin{eqnarray*}
+%%%%% first line
+%%%%        \mathcal{L}_{\rm gauge\ (T)}^{\rm EOM} ~=~   
+%%%%        2\,e\,  {\red T_{\mu\nu\rho}} \, 
+%%%%         \overline{\Psi} \gamma^\mu F^{\nu\rho} \Psi
+%%%%        ~
+%%%%\end{eqnarray*}
+%%%%%
+%%%%	in the observable sector.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{3}
+%%%%{
+%%%%\begin{slide}{ Effective Lorentz Violating Lagrangian }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Blinds}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%	We can now bring all terms together and write out the
+%%%%	effective lagrangian
+%%%%%%
+%%%%%% All operators of phenomenological interest
+%%%%\begin{equation*}
+%%%%%% first line
+%%%%%\label{L_eff}
+%%%% - \mathcal{L}_{\rm eff~LV}
+%%%%         ~=~ 
+%%%%\overline{\Psi}\, \gamma^\mu \Big\lgroup 
+%%%% {\dgreen a_\mu} ~+~ {\dgreen b_\mu} \gamma^5 
+%%%%~+~ e\,{\dgreen c_\nu}\,   \wt{F}^{\nu\mu} 
+%%%%~+~  e\, {\dgreen d_\nu}\,\wt{F}^{\nu\mu} \gamma^5
+%%%%~+~e\, {\dgreen f_{\mu\rho\sigma}}\,  F^{\rho\sigma} 
+%%%%\Big\rgroup \Psi~, 
+%%%%\end{equation*} 
+%%%%%
+%%%%	where the LV parameters, normalized at $ m_{s} $ are
+%%%%\FromSlide{2}
+%%%%%%
+%%%%%% Coefficients of the effective lagrangian
+%%%%\begin{eqnarray*}
+%%%%%% first line
+%%%%\nonumber
+%%%%        {\dgreen a^\mu} & ~=~ &
+%%%%         -\, \frac{1}{M}\, m_e^2 {\red N_V^\mu}
+%%%%        ~+~
+%%%%        \frac{\alpha\, \log (M/m_s)}{\pi M}\, 
+%%%%        \Big\{
+%%%%%        \frac{e^2}{4\pi^2}\, m_s^2\, N_-^\mu 
+%%%%         m_s^2\, {\red N_V^\mu }
+%%%%                ~+~
+%%%%%\frac{e^2}{4\pi^2}\, \frac{\Delta m^2}{2}\, 
+%%%%                 \frac{\Delta m^2}{2}\, 
+%%%%                                   {\red     N_A^\mu}
+%%%%                ~-~
+%%%%%% second line
+%%%%%\frac{3e^2}{8\pi^2}\, \frac{\Delta m^2}{2}\, 
+%%%%                \frac{3}{2}\, \frac{\Delta m^2}{2}\, 
+%%%%                                   {\red       N^\mu }
+%%%%        \Big\}~ ,
+%%%%\\
+%%%%%\label{L_eff_coefs}
+%%%%%% third line
+%%%%        {\dgreen b^\mu} & ~=~ & 
+%%%%        \frac{\alpha\,\log (M/m_s)}{\pi M} \, 
+%%%%        \Big\{
+%%%%%        \frac{e^2}{4\pi^2}\, m_s^2\, N_+^\mu
+%%%%                 m_s^2\, {\red N_A^\mu}
+%%%%                ~+~
+%%%%%\frac{e^2}{4\pi^2}\, \frac{\Delta m^2}{2}\, 
+%%%%                 \frac{\Delta m^2}{2}\, 
+%%%%                                       {\red N_V^\mu}
+%%%%                ~-~
+%%%%%\frac{3e^2}{8\pi^2}\, m_s^2\, n^\mu
+%%%%                \frac{3}{2}\, m_s^2\, {\red N^\mu}
+%%%%        \Big\} ~,
+%%%%\\
+%%%%%% fourth line
+%%%%\nonumber
+%%%%        {\dgreen c^\mu} & ~=~ &
+%%%%         \frac{1}{M}
+%%%%        \Big\{ 
+%%%%                \frac{1}{2}{\red N_A^\mu}
+%%%%                ~-~
+%%%%                {\red N^\mu}
+%%%%        \Big\}~,\qquad 
+%%%%        {\dgreen d^\mu} ~=~
+%%%%        \frac{1}{M}\, \frac{\red N_V^\mu}{2} 
+%%%%~,\qquad 
+%%%%        {\dgreen f^{\mu\nu\rho}} ~ = ~
+%%%%        \frac{2}{M} {\red T^{\mu\nu\rho}}
+%%%%~.
+%%%%\end{eqnarray*}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	In QED, the operator $ {\dgreen a^\mu} $ can be totally
+%%%%	excluded via a phase redefinition
+%%%%$ \Psi(x) \to e^{i {\dgreen a^\mu} x_\mu} \Psi(x) $.
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{7}
+%%%%{
+%%%%\begin{slide}{ Effective Hamiltonian }
+%%%%\onlySlide*{2}{
+%%%%\DefaultTransition{Box}
+%%%%}
+%%%%\fromSlide*{3}{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%\onlyInPS{
+%%%%\vspace{-0.7cm}
+%%%%}
+%%%%	In order to infer phenomenological consequences one needs to
+%%%%	derive a non-relativistic effective Hamiltonian corresponding
+%%%%	to the lagrangian
+%%%%\onlySlide*{1}
+%%%%{
+%%%%    %%
+%%%%    %% All operators of phenomenological interest
+%%%%    \begin{equation*}
+%%%%    %% first line
+%%%%    %\label{L_eff}
+%%%%     - \mathcal{L}_{\rm eff~LV}
+%%%%             ~=~ 
+%%%%    \overline{\Psi}\, \gamma^\mu \Big\lgroup 
+%%%%     {\dgreen a_\mu} ~+~ {\dgreen b_\mu} \gamma^5 
+%%%%    ~+~ e\,{\dgreen c_\nu}\,   \wt{F}^{\nu\mu} 
+%%%%    ~+~  e\, {\dgreen d_\nu}\,\wt{F}^{\nu\mu} \gamma^5
+%%%%    ~+~e\, {\dgreen f_{\mu\rho\sigma}}\,  F^{\rho\sigma} 
+%%%%    \Big\rgroup \Psi~ 
+%%%%    \end{equation*} 
+%%%%    %
+%%%%}
+%%%%\FromSlide{2}
+%%%%\PDFtransition{Glitter}
+%%%%%%
+%%%%%% Low energy nonrelativistic Hamiltonian for the 
+%%%%%% low energy effective lagrangian
+%%%%\begin{eqnarray*}
+%%%%%% first line
+%%%%        \mathcal{H}_{\rm eff} 
+%%%%        & ~=~ &
+%%%%% a-operator
+%%%%        \frac{\vec{p} \cdot {\dgreen \vec{a}}}
+%%%%                  {m}
+%%%%        ~+~
+%%%%% b-operator
+%%%%        {\dgreen \vec{b}} \cdot \vec{\sigma}
+%%%%        ~+~
+%%%%% c-operator
+%%%%        \Big\{\, 
+%%%%                \frac{e\, \vec{p}}
+%%%%                    {m}
+%%%%                \, ,\, 
+%%%%                \big[ {\dgreen \vec{c}} \times \vec{E} \big]
+%%%%                ~-~
+%%%%                {\dgreen c^0}\, \vec{B} 
+%%%%        \Big\}
+%%%%        ~-~ 
+%%%%        e \, {\dgreen d^0} \, \big( \vec{B} \cdot \vec{\sigma} \big)
+%%%%\nonumber        \\
+%%%%%% second line
+%%%%%\label{H_eff}
+%%%%% d-operator
+%%%%        & &
+%%%%        ~+~
+%%%%        e\, {\dgreen \vec{d}} \cdot
+%%%%        \big[ \vec{E} \times \vec{\sigma} \big]
+%%%%        ~+~
+%%%%% f-operator
+%%%%        \Big\{\, 
+%%%%                \frac{e\, p^k}
+%%%%                    {m}
+%%%%                \,,\, 
+%%%%                2\, {\dgreen f_{k0l}}\, E^l 
+%%%%                ~+~
+%%%%                {\dgreen f_{klm}} \,\epsilon_{lmn}\, 
+%%%%                B^n
+%%%%        \Big\}~. 
+%%%%\end{eqnarray*}
+%%%%%
+%%%%\FromSlide{3}
+%%%%	The tightest contraints come from the experiments searching
+%%%%	for abnormal spin precession around external directions 
+%%%%	determined by the LV vectors.
+%%%%	The parameter to compare with is the energy shift due
+%%%%	to Lorentz violation --- $\Delta \omega_{\rm LV}$.
+%%%%\FromSlide{4}
+%%%%	Since the effects are mediated by dimension {\myit five}
+%%%%	operators, the strength of the constraints greatly depends
+%%%%	on the ``intrinsic'' energy scale $ \mu $ of the experiment:
+%%%%$\Delta \omega_{\rm LV} \sim \mu^2 M^{-1}$.
+%%%%	
+%%%%	There are a few energy scales pertinent to 
+%%%%$ {\mathcal H}_{\rm eff} $:
+%%%%\begin{itemstep}
+%%%%\FromSlide{5}
+%%%%\item	the soft breaking scale $ m_{s} $,
+%%%%\FromSlide{6}
+%%%%\item	the hadronic scale $ \Lambda_{\rm QCD} $
+%%%%\FromSlide{7}
+%%%%\item   and the energy scale of the external electromagnetic field.
+%%%%\end{itemstep}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{7}
+%%%%{
+%%%%\begin{slide}{ Main Constraints }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Glitter}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%\begin{tabular}{p{5.4cm}|c}
+%%%%\hline
+%%%%	Type of Experiment & Estimate \\
+%%%%\hline\hline
+%%%%\fromSlide{2}{
+%%%%%\DefaultTransition{Replace}
+%%%%	Electron Spin Precession and Torsion Balance  } & 
+%%%%\fromSlide{2}{ $ |{\red N_A^i} - \frac{3}{2} {\red N^i} | < 10^{-12} $  }\\ 
+%%%%	& \\
+%%%%\fromSlide{3}{
+%%%%	Nuclear Spin Precession } &
+%%%%\fromSlide{3}{
+%%%%$ \frac {10^{19}~{\rm GeV}}{M} ~ |{\red N^i}| ~<~ 10^{-9} $ }\\
+%%%%	& \\
+%%%%\fromSlide{4}{
+%%%%	LV Precession of the angular momentum of a 
+%%%%	paramagnetic atom } &
+%%%%\fromSlide{4}{
+%%%%$ \frac {10^{19}~{\rm GeV}}{M} ~ |{\red N^i}-
+%%%%				  {\red N_A^i}/2|~<~10^{-2} $ }\\
+%%%%	& \\
+%%%%\fromSlide{5}{
+%%%%	CPT-odd anomalous magnetic moment of electron and
+%%%%	positron } &
+%%%%\fromSlide{5}{
+%%%%$ \frac {10^{19}~{\rm GeV}}{M} ~ |{\red N_V^0}| ~<~ 10^{10} $} \\
+%%%%\hline 
+%%%%\end{tabular}
+%%%%
+%%%%\vspace{0.35cm}
+%%%%\FromSlide{6}
+%%%%	Despite the Ferrara-Rimiddi theorem, there {\myit is}
+%%%%	anomalous magnetic moment of electron induced.
+%%%%	The reason is that one of the theorem's assumptions ---
+%%%%	Lorentz invariance --- is broken here.
+%%%%
+%%%%\FromSlide{7}
+%%%%	Dimension six operators were not subject of detailed examination.
+%%%%	Rough estimates suggest only $ M \sim 10^{14}~{\rm GeV} $,
+%%%%	which is lower than the Planck scale.
+%%%%	More detailed study is desired.
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{15}
+%%%%{
+%%%%\begin{slide}{ Conclusions }
+%%%%\onlySlide*{1}{
+%%%%\DefaultTransition{Box}
+%%%%}
+%%%%\fromSlide*{2}
+%%%%{
+%%%%\DefaultTransition{Replace}
+%%%%}
+%%%%
+%%%%\onlyInPS{
+%%%%\vspace{-1.0cm}
+%%%%}
+%%%%
+%%%%\begin{itemstep}
+%%%%\untilSlide*{10}{
+%%%%\item We have constructed a dimension five Lorentz-violating extension
+%%%%	of SQED
+%%%%%, as a subset of MSSM
+%%%%}
+%%%%\untilSlide*{11}{
+%%%%\item obtained the list of CPT-even dimension six LV interactions
+%%%%}
+%%%%\untilSlide*{12}{
+%%%%\item shown that no $ D $-term or gauge anomaly is induced due
+%%%%	to introduction of LV terms 
+%%%%%in the limit of the full SUSY
+%%%%}
+%%%%\untilSlide*{13}{
+%%%%\item derived 1-loop RG equations for the dimension five LV interactions
+%%%%}
+%%%%\untilSlide*{14}{
+%%%%\item calculated the dimension 3 operators induced by soft SUSY breaking
+%%%%}
+%%%%\item argued that quadratic divergencies are stabilized at the
+%%%%	SUSY breaking scale, which alleviates the naturalness problem
+%%%%\item proved that the Chern-Simons term is not generated at the loop
+%%%%	level
+%%%%\item demonstrated that none of the LV operators lead to high-energy
+%%%%	modification of the dispersion relations
+%%%%\item computed explicit component expression for the LV interactions
+%%%%\item limited a combination of the vector backgrounds by using
+%%%%	results of torsion balance experiments, at the level 
+%%%%	$ O(10^{-12}) $
+%%%%\end{itemstep}	
+%%%%\dgreen
+%%%%\FromSlide{11}
+%%%%	Severe constraints pose a serious challenge for theories
+%%%%	predicting Lorentz violation at $ 1/M_{\rm Pl} $ level
+%%%%
+%%%%\FromSlide{12}
+%%%%	This may be motivated by symmetry reasons, {\myit e.g.} CPT
+%%%%
+%%%%\FromSlide{13}
+%%%%	At the next order,  $ 1/M_{\rm Pl}^2 $, CPT-conserving operators
+%%%%	are not excluded
+%%%%
+%%%%\onlyInPDF{
+%%%%\FromSlide{14}
+%%%%	They do not lead to modifications of dispersion relations, hence
+%%%%	strong astrophysical bounds are not applicable to them
+%%%%}
+%%%%
+%%%%\FromSlide{15}
+%%%%	Estimates come close to experimental sensitivity, and therefore
+%%%%	deserve further study in the framework of LV MSSM
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%%\overlays{1}
+%%%%{
+%%%%\begin{slide}[Blinds]{ Collaboration }
+%%%%\onlyInPDF{
+%%%%\vspace{-0.9cm}
+%%%%\clearpage
+%%%%%%\begin{figure}
+%%%%%%\centering
+%%%%%%\includegraphics[width=10.8cm]{IMGP2770.PS}
+%%%%%%%\caption{Caption goes here}
+%%%%%%\end{figure}
+%%%%%\clearpage
+%%%%
+%%%%\vspace{-7cm}
+%%%%}
+%%%%{\red\fontsize{10pt}{18pt}\selectfont
+%%%%\qquad P.A.Bolokhov, S.G.Nibbelink, M.Pospelov, hep-ph/0505029
+%%%%
+%%%%\qquad We thank L.Smolin, N.Arkani-Hamed, M.Voloshin and M.Shifman
+%%%%
+%%%%\qquad --- University of Guelph
+%%%%
+%%%%\qquad --- University of Victoria
+%%%%
+%%%%\qquad --- Perimeter Institute
+%%%%
+%%%%}
+%%%%
+%%%%\end{slide}
+%%%%}
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
+%%%%%%\overlays{10}
+%%%%%%{
+%%%%%%\begin{slide}[Blinds]{ Title }
+%%%%%%
+%%%%%%
+%%%%%%\end{slide}
+%%%%%%}
+%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SLIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+
+\end{document}

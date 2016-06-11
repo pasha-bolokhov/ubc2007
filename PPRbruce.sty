@@ -1,0 +1,73 @@
+%==============================================================================
+% Prosper -- (PPRbruce) Style file	%%% Apr.2003, B.Fast
+%==============================================================================
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{PPRbruce}[2002/15/05]
+\typeout{`bruce' style for prosper -- for COLOR SLIDES ONLY}
+\typeout{(not defined well for B/W)     (c) 2002 Bruce Fast}
+\typeout{ }
+\RequirePackage{amssymb}
+\RequirePackage{pst-grad}
+
+	\newrgbcolor{crimson}{.3 0 0}
+	\newrgbcolor{midnight}{0 0 0.2}
+	\newrgbcolor{PlumTickled}{1 0.6 1}
+	\newrgbcolor{gradcolA}{0.50 0.00 0.15}
+	\newrgbcolor{gradcolB}{0.15 0.00 0.71}
+	\newrgbcolor{bottomdots}{0.9 0.4 0.0}
+	\newrgbcolor{bubbleA}{0.0 0.8 0.2}
+	\newrgbcolor{bubbleB}{0.0 0.7 0.4}
+	\newrgbcolor{bubbleC}{0.0 0.6 0.6}
+	\newrgbcolor{bubbleD}{0.0 0.5 0.8}
+	\newrgbcolor{bubbleE}{0.0 0.4 1.0}
+
+\FontTitle
+  {\usefont{T1}{phv}{b}{n}\fontsize{17.28pt}{18pt}\selectfont \lightgray}
+  {\usefont{T1}{phv}{b}{n}\fontsize{17.28pt}{18pt}\selectfont \lightgray}
+\FontText
+  {\white \usefont{T1}{phv}{m}{n}\fontsize{12.4pt}{12pt}\selectfont}
+  {\white \usefont{T1}{phv}{m}{n}\fontsize{12.4pt}{12pt}\selectfont}
+\ColorFoot{\yellow}
+\LogoPosition{2,2}
+
+\def\labelitemi{{\Large\PlumTickled\ensuremath{\bullet}}}
+\def\labelitemii{{\small\PlumTickled\ensuremath{\blacklozenge}}}
+\myitem{1}{\large\PlumTickled $\bullet$}
+\myitem{2}{\small\PlumTickled $\blacktriangleright$}
+
+\newcommand{\slidetitle}[1]{\rput[lt](-.2,4.4){\fontTitle{#1}}}
+
+\newcommand{\HarvFrame}[1]{
+
+  \psframe[linestyle=none,fillstyle=gradient,	% full background
+	gradbegin=gradcolA,gradend=gradcolB](-2,-2)(12.5,9)
+
+  \psframe[linestyle=none,fillstyle=solid,	% titlebar
+	fillcolor=midnight](-.7,7.3)(12.5,8.4)
+
+  \psframe[linestyle=none,fillstyle=solid,	% bottombar (flourish)
+	fillcolor=crimson](-.4,-.7)(4.5,-1.35)
+
+%%% dots along the bottom
+  \psset{linecolor=bottomdots}
+  \multirput(3,-.7)(.3,0){30}{\qdisk(0,0){1.2pt}}
+
+%%% bubbles up left edge;  different sizes/colors
+%%% multirput(-1.3,6.5)(0,.4){5}{\qdisk(0,0){2pt}}
+  \psset{linecolor=bubbleA} \qdisk(-1.3,6.5){1.5pt}
+  \psset{linecolor=bubbleB} \qdisk(-1.3,7.0){1.9pt}
+  \psset{linecolor=bubbleC} \qdisk(-1.3,7.5){2.3pt}
+  \psset{linecolor=bubbleD} \qdisk(-1.3,8.0){2.8pt}
+  \psset{linecolor=bubbleE} \qdisk(-1.3,8.5){3.3pt}
+
+  \PutLogo
+{#1}}
+
+%%%%	Footer: ONLY PAGE NUMBER!
+\renewpagestyle{GenericPageStyle}{\hfill }{\hfill
+	{\@colorFoot\footnotesize\thepage ~ ~ ~ ~}}
+
+\NewSlideStyle{t}{4.8,3.1}{HarvFrame}	% translation of text
+\RequirePackage{semhelv}
+\PDFCroppingBox{0 0 612 792}
+\endinput
